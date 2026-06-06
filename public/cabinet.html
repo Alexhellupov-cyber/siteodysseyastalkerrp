@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Кабинет</title>
+<link rel="icon" type="image/png" href="/img/logo.png">
+<link rel="stylesheet" href="css/cabinet.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="cabinet-page">
+
+<div class="cabinet-layout">
+
+    <aside class="cabinet-sidebar">
+        <a href="/index.html"
+       class="home-btn">
+
+        НА ГЛАВНУЮ
+
+    </a>
+        <div class="cabinet-user">
+            <img id="avatar"
+                 class="avatar">
+
+            <h2 id="nickname">
+                STALKER
+            </h2>
+
+            <p id="steamid">
+                STEAM ID
+            </p>
+
+        </div>
+
+        <nav class="cabinet-nav">
+            <div id="login-box">
+
+    <a href="/auth/steam"
+       class="steam-btn">
+
+        Войти через Steam
+
+    </a>
+
+</div>
+            <button class="cabinet-tab active-tab"
+                    onclick="showTab(event,'profile')">
+
+                Профиль
+
+            </button>
+
+            <button class="cabinet-tab"
+                    onclick="showTab(event,'balance')">
+
+                Баланс
+
+            </button>
+
+            <button class="cabinet-tab"
+                    onclick="showTab(event, 'inventory')">
+
+                Инвентарь 
+
+            </button>
+
+            <button class="cabinet-tab"
+                    onclick="showTab(event, 'purchases')">
+
+                Покупки
+
+            </button>
+            <a href="shop.html" class="cabinet-tab">Магазин</a>
+
+            <a href="/logout"
+               class="logout-btn">
+
+                Выйти
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="cabinet-content">
+
+        <!-- PROFILE -->
+
+        <section id="profile"
+                 class="cabinet-section active-section">
+
+            <h1>
+                Профиль сталкера
+            </h1>
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <span>Группировка</span>
+
+                    <h3>Свобода</h3>
+
+                </div>
+
+                <div class="info-card">
+
+                    <span>Ранг</span>
+
+                    <h3>Ветеран</h3>
+
+                </div>
+
+                <div class="info-card">
+
+                    <span>Часов в зоне</span>
+
+                    <h3>214</h3>
+
+                </div>
+
+                <div class="info-card">
+
+                    <span>Репутация</span>
+
+                    <h3>Нейтральная</h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BALANCE -->
+
+        <section id="balance"
+                 class="cabinet-section">
+
+            <h1>
+                Баланс аккаунта
+            </h1>
+
+            <div class="balance-card">
+
+                <span>
+                    Текущий баланс
+                </span>
+
+                <h2 id="balance-value">
+                    0 RU
+                </h2>
+            </div>
+            <div class="deposit-box">
+
+    <div class="deposit-header">
+
+        <h2>
+            ПОПОЛНЕНИЕ БАЛАНСА
+        </h2>
+
+        <p>
+            Введите сумму пополнения (Минимальная сумма 100руб)
+        </p>
+
+    </div>
+
+    <div class="deposit-form">
+
+        <input
+            type="number"
+            id="deposit-amount"
+            class="deposit-input"
+            placeholder="Введите сумму">
+
+        <button
+            onclick="customDeposit()"
+            class="deposit-pay-btn">
+
+            ПОПОЛНИТЬ
+
+        </button>
+
+    </div>
+
+</div>
+        </section>
+
+        <!-- INVENTORY -->
+
+        <section id="inventory"
+                 class="cabinet-section">
+
+            <h1>
+                Инвентарь
+            </h1>
+            <h4>(ВЫДАЧА ПРОИСХОДИТ ЧЕРЕЗ АДМИНИСТРАЦИЮ, НАМ ПРИШЛО СООБЩЕНИЕ О ВАШЕМ ЗАПРОСЕ НА ВЫДАЧУ, АДМИНИСТРАТОР В КРАТЧАЙШИЕ СРОКИ СВЯЖЕТСЯ С ВАМИ)</h4>
+            <h4>(Если в подробностях в карточке товаро сказано создать тикет то сделайте это)</h4>
+            <div class="inventory-grid"
+                id="inventory-list">
+
+            </div>
+
+        </section>
+
+        <!-- PURCHASES -->
+
+        <section id="purchases"
+                 class="cabinet-section">
+
+            <h1>
+                История покупок
+            </h1>
+
+            <div class="purchase-list"
+                id="purchase-list">
+            </div>
+
+        </section>
+        
+    </main>
+
+</div>
+
+</body>
+<script>
+
+fetch('/api/user')
+
+.then(res=>res.json())
+
+.then(user=>{
+
+    if(!user) return;
+
+    document
+    .getElementById('nickname')
+    .innerText = user.name;
+
+    document
+    .getElementById('steamid')
+    .innerText = user.steamid;
+
+    document
+    .getElementById('avatar')
+    .src = user.avatar;
+
+});
+
+fetch('/api/data')
+
+.then(res=>res.json())
+
+.then(data=>{
+
+    // BALANCE
+
+    document
+    .getElementById('balance-value')
+    .innerText =
+
+        data.balance.toLocaleString()
+        + ' RU';
+
+    // INVENTORY
+
+    const inventory =
+
+    document.getElementById(
+        'inventory-list'
+    );
+
+    inventory.innerHTML = '';
+
+    data.inventory.forEach(item=>{
+
+        inventory.innerHTML += `
+
+        <div class="inventory-item">
+
+            <h3>
+
+                ${item.name}
+
+            </h3>
+
+            <button
+                class="claim-btn"
+                onclick="claimItem('${item.id}')">
+
+                ПОЛУЧИТЬ
+
+            </button>
+
+        </div>
+
+        `;
+    });
+
+    // PURCHASES
+
+    const purchases =
+
+    document.getElementById(
+        'purchase-list'
+    );
+
+    purchases.innerHTML = '';
+
+    data.purchases
+    .slice()
+    .reverse()
+    .forEach(purchase=>{
+
+        purchases.innerHTML += `
+
+            <div class="purchase-card">
+
+                <h3>
+                    ${purchase.name}
+                </h3>
+
+                <p>
+                    ${new Date(
+                        purchase.date
+                    ).toLocaleString()}
+                </p>
+
+            </div>
+
+        `;
+
+    });
+
+});
+
+function showTab(event,id){
+
+    document
+    .querySelectorAll('.cabinet-section')
+    .forEach(section=>{
+
+        section.classList.remove(
+            'active-section'
+        );
+
+    });
+
+    document
+    .querySelectorAll('.cabinet-tab')
+    .forEach(btn=>{
+
+        btn.classList.remove(
+            'active-tab'
+        );
+
+    });
+
+    document
+    .getElementById(id)
+    .classList.add(
+        'active-section'
+    );
+
+    event.target.classList.add(
+        'active-tab'
+    );
+
+}
+
+async function buyItem(item){
+
+    const res =
+
+    await fetch('/buy/' + item,{
+
+        method:'POST'
+
+    });
+
+    const data =
+    await res.json();
+
+    if(data.success){
+
+        alert('Покупка успешна');
+
+        location.reload();
+
+    }else{
+
+        alert(
+
+            data.error ===
+            'not enough money'
+
+            ? 'Недостаточно денег'
+
+            : data.error
+
+        );
+
+    }
+
+}
+async function claimItem(item){
+
+    const res =
+
+    await fetch('/claim/' + item,{
+
+        method:'POST'
+
+    });
+
+    const data =
+    await res.json();
+
+    if(data.success){
+
+        showNotify(
+
+            'Предмет отправлен в игру',
+
+            'success'
+
+        );
+
+        location.reload();
+
+    }else{
+
+        showNotify(
+
+            data.error,
+
+            'error'
+
+        );
+
+    }
+
+}
+
+async function deposit(
+    amount
+){
+
+    const res =
+    await fetch(
+
+        '/create-payment',
+
+        {
+
+            method:'POST',
+
+            headers:{
+                'Content-Type':
+                'application/json'
+            },
+
+            body:JSON.stringify({
+                amount
+            })
+
+        }
+
+    );
+
+    const data =
+    await res.json();
+
+    if(data.error){
+
+        alert(data.error);
+
+        return;
+    }
+
+    window.location.href =
+    data.url;
+
+}
+async function customDeposit(){
+
+    const amount =
+
+    Number(
+
+        document
+        .getElementById(
+            'deposit-amount'
+        )
+        .value
+
+    );
+
+    if(
+        !amount ||
+        amount < 100
+    ){
+
+        alert(
+            'Минимальная сумма 100 RUB'
+        );
+
+        return;
+    }
+
+    deposit(amount);
+
+}
+</script>
+</body>
+</html>
+</html>

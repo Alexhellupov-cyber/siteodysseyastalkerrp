@@ -1,0 +1,1249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#000;
+    color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+
+    background:url('https://images.unsplash.com/photo-1511884642898-4c92249e20b6?q=80&w=2070') center/cover no-repeat;
+
+    filter:brightness(0.35);
+
+    transform:scale(1.05);
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,.4),
+    rgba(0,0,0,.7));
+
+    z-index:1;
+}
+
+.header{
+    position:relative;
+    z-index:10;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:30px 80px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+
+    color:#b7d48a;
+
+    letter-spacing:2px;
+
+    text-shadow:
+    0 0 3px rgba(158,255,0,.25),
+    0 0 8px rgba(158,255,0,.15);
+
+    animation:logoFlicker 6s infinite;
+}
+@keyframes logoFlicker{
+
+    0%{
+        opacity:1;
+    }
+
+    2%{
+        opacity:.75;
+    }
+
+    4%{
+        opacity:1;
+    }
+
+    19%{
+        opacity:1;
+    }
+
+    20%{
+        opacity:.6;
+    }
+
+    21%{
+        opacity:1;
+    }
+
+    60%{
+        opacity:.95;
+    }
+
+    61%{
+        opacity:.7;
+    }
+
+    62%{
+        opacity:.95;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+
+    gap:40px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:white;
+
+    font-weight:500;
+
+    transition:.3s;
+    display:flex;
+
+    align-items:center;
+}
+
+.nav a:hover{
+    color:#9eff00;
+}
+
+.hero{
+    position:relative;
+    z-index:5;
+
+    height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 80px;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.subtitle{
+    color:#9eff00;
+
+    font-size:18px;
+    margin-bottom:15px;
+
+    letter-spacing:4px;
+}
+
+.hero h1{
+    font-size:82px;
+    line-height:90px;
+
+    margin-bottom:25px;
+
+    font-weight:900;
+}
+
+.description{
+    font-size:18px;
+    line-height:32px;
+
+    color:#ccc;
+
+    margin-bottom:40px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+
+    margin-bottom:60px;
+}
+
+.play-btn,
+.discord-btn{
+    border:none;
+    cursor:pointer;
+
+    padding:18px 35px;
+
+    font-size:16px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.play-btn{
+    background:#9eff00;
+    color:black;
+}
+
+.play-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px #9eff00;
+}
+
+.discord-btn{
+    background:transparent;
+    border:2px solid white;
+    color:white;
+}
+
+.discord-btn:hover{
+    border-color:#9eff00;
+    color:#9eff00;
+}
+
+.server-info{
+    display:flex;
+    gap:20px;
+}
+
+.card{
+    backdrop-filter:blur(10px);
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    padding:25px;
+
+    width:180px;
+}
+
+.card span{
+    color:#999;
+    font-size:14px;
+}
+
+.card h2{
+    margin-top:10px;
+
+    font-size:30px;
+}
+
+.about{
+    position:relative;
+    z-index:5;
+
+    padding:120px 80px;
+
+    background:#0b0b0b;
+}
+
+.about-header{
+    margin-bottom:60px;
+}
+
+.about-header p{
+    color:#9eff00;
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+}
+
+.about-header h2{
+    font-size:52px;
+    font-weight:900;
+}
+
+.about-content{
+    display:flex;
+    gap:60px;
+
+    align-items:flex-start;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text p{
+    color:#bdbdbd;
+
+    line-height:34px;
+
+    margin-bottom:25px;
+
+    font-size:17px;
+}
+
+.wipe-box{
+    margin-bottom:40px;
+
+    border-left:4px solid #9eff00;
+
+    padding-left:20px;
+}
+
+.wipe-box span{
+    color:#888;
+
+    font-size:14px;
+}
+
+.wipe-box h3{
+    margin-top:10px;
+
+    font-size:34px;
+
+    color:#fff;
+}
+
+.about-stats{
+    width:500px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.stat-card{
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:35px;
+
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#9eff00;
+}
+
+.stat-card h2{
+    font-size:42px;
+
+    margin-bottom:10px;
+
+    color:#9eff00;
+}
+
+.stat-card span{
+    color:#aaa;
+}
+
+.discord-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+}
+
+
+
+.play-page{
+    position:relative;
+    z-index:5;
+
+    min-height:100vh;
+
+    padding:180px 80px 120px;
+}
+
+.play-container{
+    max-width:1400px;
+    margin:auto;
+}
+
+.steps{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:70px;
+}
+
+.step-card{
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:40px;
+
+    transition:.3s;
+}
+
+.step-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#9eff00;
+
+    box-shadow:0 0 25px rgba(158,255,0,.1);
+}
+
+.step-card span{
+    font-size:42px;
+    font-weight:900;
+
+    color:#9eff00;
+}
+
+.step-card h2{
+    margin:25px 0 20px;
+
+    font-size:28px;
+}
+
+.step-card p{
+    color:#bdbdbd;
+
+    line-height:30px;
+
+    margin-bottom:30px;
+}
+
+.download-btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:15px 25px;
+
+    background:#9eff00;
+
+    color:black;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.download-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px rgba(158,255,0,.3);
+}
+
+.server-connect{
+    margin-top:80px;
+}
+
+.server-connect h2{
+    margin-bottom:25px;
+
+    font-size:38px;
+}
+
+.ip-box{
+    background:black;
+
+    border:1px solid rgba(158,255,0,.3);
+
+    padding:30px;
+
+    font-size:32px;
+
+    color:#9eff00;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    display:inline-block;
+}
+
+.play-btn{
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.launcher-info{
+    margin-top:25px;
+
+    max-width:700px;
+}
+
+.launcher-info p{
+    color:#bdbdbd;
+
+    line-height:32px;
+
+    margin-bottom:15px;
+
+    font-size:17px;
+}
+
+.launcher-info h3{
+    font-size:34px;
+
+    color:#fff;
+
+    margin:20px 0;
+}
+
+.red{
+    color:#ff4d4d;
+
+    font-weight:700;
+}
+
+.green{
+    color:#7dff7d;
+
+    font-weight:700;
+}
+
+.modpacks{
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.mods-info{
+    margin-top:25px;
+
+    color:#9c9c9c;
+
+    line-height:30px;
+}
+
+.connect-section{
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    margin-top:70px;
+}
+.connect-left{
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.connect-left h2{
+    font-size:48px;
+
+    line-height:56px;
+
+    margin:10px 0 20px;
+}
+
+.mini-title{
+    color:#9eff00;
+
+    letter-spacing:4px;
+
+    font-size:14px;
+}
+
+.ip-card{
+    background:rgba(0,0,0,.72);
+
+    border:1px solid rgba(158,255,0,.18);
+
+    padding:25px 30px;
+
+    margin-bottom:30px;
+
+    backdrop-filter:blur(10px);
+
+    max-width:700px;
+}
+
+.ip-card span{
+    color:#777;
+
+    font-size:14px;
+}
+
+.ip-value{
+    margin-top:10px;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    color:#9eff00;
+
+    letter-spacing:1px;
+}
+
+.connect-right{
+    display:flex;
+    flex-direction:column;
+
+    gap:25px;
+}
+
+.workshop-card{
+    background:rgba(10,10,10,.72);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    padding:22px 25px;
+
+    transition:.3s;
+
+    backdrop-filter:blur(8px);
+
+    min-height:auto;
+}
+
+.workshop-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#9eff00;
+
+    box-shadow:0 0 30px rgba(158,255,0,.08);
+}
+
+.workshop-top span{
+    color:#888;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+}
+
+.workshop-top h2{
+    margin-top:8px;
+
+    font-size:22px;
+
+    line-height:28px;
+}
+
+.workshop-card a{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 18px;
+
+    width:140px;
+
+    background:#9eff00;
+
+    color:black;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+.workshop-card a:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 0 20px rgba(158,255,0,.2);
+}
+
+.workshop-card p{
+    margin-top:10px;
+
+    color:#8d8d8d;
+
+    line-height:24px;
+
+    margin-bottom:18px;
+
+    font-size:14px;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width:1100px){
+
+    .header{
+        padding:0 30px;
+    }
+
+    .wiki-page{
+        padding:140px 30px 70px;
+    }
+
+    .wiki-header h1{
+        font-size:58px;
+
+        line-height:64px;
+    }
+
+    .faction-banner{
+        height:320px;
+    }
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width:768px){
+
+    .header{
+
+        position:fixed;
+
+        top:0;
+        left:0;
+
+        width:100%;
+
+        padding:15px 18px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:15px;
+
+        z-index:999;
+
+        backdrop-filter:blur(12px);
+
+        background:rgba(0,0,0,.75);
+
+        box-sizing:border-box;
+    }
+    body{
+    overflow-x:hidden;
+}
+    .logo{
+
+    width:100%;
+
+    text-align:left;
+
+    font-size:18px;
+
+    line-height:22px;
+
+    letter-spacing:1px;
+}
+
+    .nav{
+
+        width:100%;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        flex-wrap:wrap;
+
+        gap:12px;
+    }
+
+    .nav a{
+
+        font-size:13px;
+
+        padding:6px 10px;
+    }
+    .about{
+    padding:80px 20px;
+}
+
+.about-header h2{
+    font-size:42px;
+
+    line-height:48px;
+}
+
+.about-content{
+    flex-direction:column;
+
+    gap:40px;
+}
+
+.about-text{
+    width:100%;
+}
+
+.about-text p{
+    font-size:16px;
+
+    line-height:30px;
+}
+
+.about-stats{
+    width:100%;
+
+    grid-template-columns:1fr;
+}
+
+.stat-card{
+    width:100%;
+
+    padding:25px;
+}
+
+.stat-card h2{
+    font-size:34px;
+}
+
+.wipe-box h3{
+    font-size:28px;
+}
+
+.hero{
+    padding:0 20px;
+
+    height:auto;
+
+    min-height:100vh;
+}
+
+.hero-content{
+    width:100%;
+}
+
+.hero h1{
+
+    font-size:42px;
+
+    line-height:46px;
+
+    margin-bottom:20px;
+
+    max-width:300px;
+
+    word-break:break-word;
+}
+
+.description{
+    font-size:16px;
+
+    line-height:30px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+.play-btn,
+.discord-btn{
+    width:100%;
+}
+
+.server-info{
+    flex-direction:column;
+}
+
+.card{
+    width:100%;
+}
+
+    .hero,
+    .wiki-page,
+    .rules-page{
+
+        padding-top:170px;
+    }
+
+    .wiki-header h1{
+        font-size:42px;
+
+        line-height:48px;
+    }
+
+    .wiki-header p{
+        font-size:16px;
+
+        line-height:30px;
+    }
+
+    .wiki-grid{
+        grid-template-columns:1fr;
+    }
+
+    .wiki-card{
+        height:240px;
+    }
+
+    .wiki-card-content h2{
+        font-size:28px;
+    }
+
+    .wiki-category-header{
+        padding:22px;
+    }
+
+    .wiki-category-header h2{
+        font-size:28px;
+    }
+
+    .wiki-open-btn{
+        width:110px;
+
+        height:42px;
+
+        font-size:14px;
+    }
+
+    .faction-buttons{
+        flex-direction:column;
+    }
+
+    .faction-btn{
+        width:100%;
+    }
+
+    .faction-banner{
+        height:220px;
+    }
+
+    .faction-info{
+        padding:25px;
+    }
+
+    .faction-info h2{
+        font-size:36px;
+    }
+
+    .faction-info p{
+        font-size:15px;
+
+        line-height:30px;
+    }
+
+    .map-wrapper{
+        height:500px;
+    }
+
+    .restart-grid,
+    .packs-grid,
+    .buried-grid{
+        grid-template-columns:1fr;
+    }
+
+    .emission-gallery,
+    .hunt-gallery,
+    .labs-gallery,
+    .packs-gallery,
+    .buried-gallery,
+    .arthunt-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .spawn-card img{
+        height:220px;
+    }
+
+    .buried-spawn-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .restart-time{
+        height:75px;
+
+        font-size:26px;
+    }
+
+}
+
+/* ========================= */
+/* SMALL MOBILE */
+/* ========================= */
+
+@media (max-width:480px){
+
+    .wiki-header h1{
+        font-size:34px;
+
+        line-height:40px;
+    }
+
+    .wiki-category-header{
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+    }
+
+    .wiki-category-header h2{
+        font-size:24px;
+    }
+
+    .wiki-open-btn{
+        width:100%;
+    }
+
+    .faction-info h2{
+        font-size:30px;
+    }
+
+    .faction-banner{
+        height:180px;
+    }
+
+    .wiki-card{
+        height:200px;
+    }
+
+    .wiki-card-content{
+        padding:20px;
+    }
+
+    .wiki-card-content h2{
+        font-size:24px;
+    }
+
+    .wiki-card-content p{
+        font-size:14px;
+
+        line-height:24px;
+    }
+
+}
+
+/* ========================= */
+/* PLAY PAGE MOBILE */
+/* ========================= */
+
+@media (max-width:768px){
+
+    .discord-nav-btn
+    .play-page{
+
+        padding:170px 20px 70px;
+    }
+
+    .play-container{
+        width:100%;
+    }
+
+    .play-container h1{
+
+        font-size:42px;
+
+        line-height:48px;
+    }
+
+    .steps{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+        margin-top:40px;
+    }
+
+    .step-card{
+
+        padding:25px;
+    }
+
+    .step-card span{
+
+        font-size:34px;
+    }
+
+    .step-card h2{
+
+        font-size:24px;
+
+        line-height:30px;
+
+        margin:20px 0 15px;
+    }
+
+    .step-card p{
+
+        font-size:15px;
+
+        line-height:28px;
+    }
+
+    .download-btn{
+
+        width:100%;
+
+        height:52px;
+    }
+
+    .connect-section{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+        margin-top:50px;
+    }
+
+    .connect-left h2{
+
+        font-size:36px;
+
+        line-height:42px;
+    }
+
+    .ip-card{
+
+        width:100%;
+
+        padding:22px;
+    }
+
+    .ip-value{
+
+        font-size:22px;
+
+        line-height:30px;
+
+        word-break:break-word;
+    }
+
+    .connect-right{
+
+        gap:18px;
+    }
+
+    .workshop-card{
+
+        padding:20px;
+    }
+
+    .workshop-top h2{
+
+        font-size:20px;
+
+        line-height:26px;
+    }
+
+    .workshop-card p{
+
+        font-size:14px;
+
+        line-height:24px;
+    }
+
+    .workshop-card a{
+
+        width:100%;
+
+        height:48px;
+    }
+
+    .server-connect{
+
+        margin-top:60px;
+    }
+
+    .server-connect h2{
+
+        font-size:30px;
+
+        line-height:36px;
+    }
+
+    .ip-box{
+
+        width:100%;
+
+        font-size:22px;
+
+        line-height:32px;
+
+        padding:20px;
+
+        letter-spacing:1px;
+
+        word-break:break-word;
+    }
+
+    .launcher-info h3{
+
+        font-size:28px;
+    }
+
+    .launcher-info p{
+
+        font-size:15px;
+
+        line-height:28px;
+    }
+
+    .modpacks{
+
+        gap:12px;
+    }
+
+}
+.discord-nav-btn{
+
+    height:42px;
+
+    padding:0 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:#9eff00;
+
+    color:black !important;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.discord-nav-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 20px rgba(158,255,0,.35);
+
+    background:#b7ff33;
+}

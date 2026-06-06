@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wiki | ODYSSEYA STALKER</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/wiki.css">
+
+
+</head>
+
+<body>
+
+    <div class="bg-overlay"></div>
+
+    <header class="header">
+
+        <div class="logo">
+            ODYSSEYA STALKER
+        </div>
+
+        <nav class="nav">
+
+            <a href="index.html">Главная</a>
+            <a href="play.html">Сервер</a>
+            <a href="shop.html">Магазин</a>
+            <a href="rules.html">Правила</a>
+            <a href="wiki.html">Wiki</a>
+            <a href="cabinet.html" class="cabinet-nav-btn">Кабинет</a>
+            <a href="https://discord.gg/wCDnUGvfFm" target="_blank" class="discord-nav-btn">Discord</a>
+
+        </nav>
+
+    </header>
+
+    <section class="wiki-page">
+
+        <div class="wiki-header">
+
+            <span>ЭНЦИКЛОПЕДИЯ ЗОНЫ</span>
+
+            <h1>
+                WIKI ODYSSEYA
+            </h1>
+
+            <p>
+                Информация о мире проекта,
+                группировках, мутантах,
+                артефактах и локациях.
+            </p>
+
+        </div>
+
+        <div class="wiki-grid">
+
+            <div class="wiki-sections">
+
+                <div class="wiki-category" id="map-section">
+
+    <div class="wiki-category-header"
+        onclick="toggleFactionCategory(this)">
+
+        <h2>Карта зоны</h2>
+
+        <button class="wiki-open-btn">
+            Открыть
+        </button>
+
+    </div>
+
+    <div class="wiki-category-content">
+        <a href="https://miro.com/app/board/uXjVHWmTP20=/" target="_blank" class="wiki-open-btn">
+            Открыть карту в браузере
+        </a>
+        <div class="map-wrapper">
+
+            <iframe
+                src="https://miro.com/app/board/uXjVHWmTP20=/"
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </div>
+
+                </div>
+                <div class="wiki-category">
+
+                    <div class="wiki-category-header"
+                        onclick="toggleFactionCategory(this)">
+
+                        <h2>Группировки</h2>
+
+                        <button class="wiki-open-btn">
+                    Открыть
+                </button>
+
+                    </div>
+
+                    <div class="wiki-category-content">
+
+                        <!-- КНОПКИ ГП -->
+
+                        <div class="faction-buttons">
+
+                            <button class="faction-btn active"
+                                onclick="openFaction(event,'Neytrals')">
+
+                                Нейтралы
+
+                            </button>
+
+                            <button class="faction-btn"
+                                onclick="openFaction(event,'Bandits')">
+
+                                Братва
+
+                            </button>
+
+                            <button class="faction-btn"
+                                onclick="openFaction(event,'ClearSky')">
+
+                                Чистое Небо
+
+                            </button>
+                            <button class="faction-btn"
+                                onclick="openFaction(event,'Mby')">
+
+                                Учёные \ ОБУ
+
+                            </button>
+                            <button class="faction-btn"
+                                onclick="openFaction(event,'Renegates')">
+
+                                Ренегаты
+
+                            </button>
+                            <button class="faction-btn"
+                                onclick="openFaction(event,'Monolit')">
+
+                                Монолит
+
+                            </button>
+                            <button class="faction-btn"
+                                onclick="openFaction(event,'Dolg')">
+
+                                Долг
+
+                            </button>
+                            <button class="faction-btn"
+                                onclick="openFaction(event,'Svoboda')">
+
+                                Свобода
+
+                            </button>
+                            <button class="faction-btn"
+                                onclick="openFaction(event,'Merc')">
+
+                                Наёмники
+
+                            </button>
+                            <button class="faction-btn"
+                                onclick="openFaction(event,'Starosta')">
+
+                                Старосты
+
+                            </button>
+                            <button class="faction-btn"
+                                onclick="openFaction(event,'OKSOP')">
+
+                                ОКСОП
+
+                            </button>
+
+
+                        </div>
+
+                        <!-- ДОЛГ -->
+
+                        <div class="faction-content active-faction"
+                            id="Neytrals">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/neytrals.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>Нейтралы</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        это группировка из опытных сталкеров, которые выживают на территории ЧЗО уже не малое время. Помогают всем сталкерам. 
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- СВОБОДА -->
+
+                        <div class="faction-content"
+                            id="Bandits">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/bandits.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>Братва</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        представители криминального мира на территории ЧЗО. Основная цель - скрыться от правосудия на территории ЧЗО, заработок в зоне. 
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Чистое Небо -->
+
+                        <div class="faction-content"
+                            id="ClearSky">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/clearsky.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>Чистое Небо</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        исследователи явлений Зоны, малоизвестная группировка. Достоверно никто не знает, какова их численность, чем они занимаются и какие цели преследуют.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Учёные/ОБУ -->
+
+                        <div class="faction-content"
+                            id="Mby">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/nauk.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>Учёные / ОБУ</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        Полевая Научная Группа, направленная Научно-Исследовательским Институтом Чернобыльской Аномальной Зоны (НИИ ЧАЗ), для проведения исследований аномальных явлений, которые могут помочь в продвижении медицины и науки в целом. Подчиняются приказам правительства наряду с военными.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Ренегаты -->
+
+                        <div class="faction-content"
+                            id="Renegates">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/renegate.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>Ренегаты</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        это отбросы общества, отморозки, убийцы, маньяки, грабители, все худшие люди составляют эту группировку. 
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Монолит -->
+
+                        <div class="faction-content"
+                            id="Monolit">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/monolit.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>Монолит</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        После второго выброса и катастрофического расширения Зоны отчуждения, связь с внешним миром почти полностью прервалась. В то время как сталкеры искали артефакты и богатства, некоторые из них — попав под воздействие излучения саркофага — услышали Голос Монолита. Они уверовали, что этот Голос — проявление воли высшей силы, живущей в сердце ЧАЭС.
+
+                Эти люди стали первыми посвящёнными, основавшими культ Монолита. Со временем они превратились в фанатичную военную силу, оберегающую Сердце Зоны от любого, кто осмелился приблизиться к ней. 
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Долг -->
+
+                        <div class="faction-content"
+                            id="Dolg">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/dolg.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>Долг</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        одна из незаконных группировок территории ЧАЗ. Состоят из бывших военных и сталкеров.  От них остались устав, строгая дисциплина и четкая цель - защита мира от Зоны  
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- СВобода -->
+
+                        <div class="faction-content"
+                            id="Svoboda">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/svoboda.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>Свобода</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        Анархичная группировка, не признающие никаких законов и порядков. Иерархии и рангов в группировке, как таковых, нет. Однако, в группировке есть Атаман, слово которого является последним. 
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Наёмники -->
+
+                        <div class="faction-content"
+                            id="Merc">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/merc.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>Наёмники</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        Отлично подготовленная и вооруженная группа людей. Они всегда выполняют работу только за определенную плату. 
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Старосты -->
+
+                        <div class="faction-content"
+                            id="Starosta">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/starosty.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>Старосты</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        сталкера-ветераны, которые больше не гонятся за легендами Зоны, а помогают новичкам освоится. Следят за порядком в деревне новичков и держат шаткий нейтралитет с Военными. Каждый является уникальной личностью со своими историями и огромным опытом жизни в Зоне. Всеми возможными способами помогают новичкам. Дают им защиту от враждебно настроенных сталкеров, помогают им советами, оказывают взаимовыручку, делятся излишками снаряжения. 
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ОКСОП -->
+
+                        <div class="faction-content"
+                            id="OKSOP">
+
+                            <div class="faction-banner">
+
+                                <img src="img/factions/oksop.jpg" alt="">
+
+                            </div>
+
+                            <div class="faction-info">
+
+                                <h2>ОКСОП</h2>
+
+                                <div class="faction-lore">
+
+                                    <h3>ЛОР</h3>
+
+                                    <p>
+                                        не допускать проникновения нелегальных лиц на территорию ЧЗО.  
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="wiki-category">
+                <div class="wiki-category-header"
+                    onclick="toggleFactionCategory(this)">
+
+                    <h2>Рестарты сервера</h2>
+
+                    <button class="wiki-open-btn">
+                        Открыть
+                    </button>
+
+                </div>
+
+    <div class="wiki-category-content">
+
+        <div class="restart-box">
+
+            <h3>
+                Рестарты происходят каждые 4 часа
+            </h3>
+
+            <p>
+                Время указано по МСК
+            </p>
+
+            <div class="restart-grid">
+
+                <div class="restart-time">00:00</div>
+                <div class="restart-time">04:00</div>
+                <div class="restart-time">08:00</div>
+                <div class="restart-time">12:00</div>
+                <div class="restart-time">16:00</div>
+                <div class="restart-time">20:00</div>
+
+            </div>
+
+        </div>
+
+    </div>
+                </div>
+                <div class="wiki-category">
+
+                <div class="wiki-category-header"
+                    onclick="toggleFactionCategory(this)">
+
+                    <h2>Выбросы</h2>
+
+                    <button class="wiki-open-btn">
+                        Открыть
+                    </button>
+
+                </div>
+
+                <div class="wiki-category-content">
+
+                    <div class="emission-box">
+
+                        <div class="emission-info">
+
+                            <h3>
+                                Выбросы — смертельно опасное
+                                явление Зоны
+                            </h3>
+
+                            <p>
+                                Во время выброса
+                                территория ЧЗО становится
+                                крайне опасной.
+                                Всем сталкерам необходимо
+                                искать укрытие,
+                                иначе высок шанс погибнуть.
+                            </p>
+
+                            <div class="emission-warning">
+
+                                Выброс происходит
+                                раз в 2 часа
+                                (1 раз в рестарт)
+                            </div>
+                            <div class="emission-warning">
+                                Чтобы украться от выброса,
+                                необходимо спрятаться подальше от окон
+                                и дверей, у вас появиться индикатор выброса, который покажет что вы находитесь в безопасной зоне.
+                            </div>
+
+                        </div>
+
+                        <div class="emission-gallery">
+
+                            <img src="img\wiki\emmision\emission1.jpg" alt="">
+                            <img src="img\wiki\emmision\emission2.jpg" alt="">
+                            <img src="img\wiki\emmision\emission3.jpg" alt="">
+                            <img src="img\wiki\emmision\emission4.jpg" alt="">
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                </div>
+                <div class="wiki-category">
+                <div class="wiki-category-header"
+                    onclick="toggleFactionCategory(this)">
+
+                    <h2>Лаборатории</h2>
+
+                    <button class="wiki-open-btn">
+                        Открыть
+                    </button>
+
+                </div>
+                <div class="wiki-category-content">
+
+                    <div class="labs-box">
+
+                        <div class="labs-info">
+
+                            <h3>
+                                Опаснейшие места ЧЗО
+                            </h3>
+
+                            <p>
+                                Лаборатории —
+                                крайне опасные территории,
+                                наполненные мутантами,
+                                аномалиями и редким хабаром.
+                            </p>
+
+                            <p>
+                                История каждой лаборатории
+                                была утеряна или засекречена,
+                                однако слухи о страшных экспериментах
+                                продолжают ходить среди сталкеров.
+                            </p>
+
+                            <div class="labs-warning">
+
+                                Пока доступна:
+                                лаборатория на Янтаре
+                            </div>
+
+                            <div class="labs-card-info">
+
+                                Ключ-карту для доступа
+                                можно приобрести
+                                у RP-персонажей-ивентологов.
+                            </div>
+
+                        </div>
+
+                        <div class="labs-gallery">
+
+                            <img src="img/wiki/labs/lab1.jpg" alt="">
+
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+                <div class="wiki-category">
+
+    <div class="wiki-category-header"
+        onclick="toggleFactionCategory(this)">
+
+        <h2>Тайники</h2>
+
+        <button class="wiki-open-btn">
+            Открыть
+        </button>
+
+    </div>
+
+    <div class="wiki-category-content">
+
+        <div class="stash-box">
+
+            <div class="stash-info">
+
+                <h3>
+                    Ищи спрятанный хабар
+                </h3>
+
+                <p>
+                    Осматривай объекты,
+                    исследуй территории
+                    и ищи скрытые тайники
+                    с ценным лутом.
+                </p>
+
+                <p>
+                    Чем дальше на север —
+                    тем выше шанс найти
+                    действительно редкие
+                    и дорогие предметы.
+                </p>
+
+                <div class="stash-warning">
+
+                    Тайником может быть
+                    буквально любой объект,
+                    который вы видите.
+                </div>
+
+                <div class="stash-tip">
+
+                    Больше внимательности —
+                    и вы точно станете богаче.
+                </div>
+
+            </div>
+
+            <div class="stash-gallery">
+
+                <img src="img/wiki/stash/stash1.jpg" alt="">
+                <img src="img/wiki/stash/stash2.jpg" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+
+                </div>
+                <div class="wiki-category">
+
+    <div class="wiki-category-header"
+        onclick="toggleFactionCategory(this)">
+
+        <h2>Охота на мутантов</h2>
+
+        <button class="wiki-open-btn">
+            Открыть
+        </button>
+
+    </div>
+
+    <div class="wiki-category-content">
+
+        <div class="hunt-box">
+
+            <div class="hunt-info">
+
+                <h3>
+                    Самый опасный заработок в ЧЗО
+                </h3>
+
+                <p>
+                    Убивай мутантов,
+                    добывай части их тел
+                    и продавай торговцам
+                    за хорошую награду.
+                </p>
+
+                <p>
+                    Чем опаснее цель —
+                    тем ценнее добыча
+                    и выше заработок.
+                </p>
+
+                <div class="hunt-warning">
+
+                    Некоторые мутанты
+                    способны убить даже
+                    хорошо экипированного сталкера.
+                </div>
+
+                <div class="hunt-tip">
+
+                    На сервере присутствует
+                    система ускоренной разделки мутантов.
+                    Одни ножи позволяют разделывать
+                    туши значительно быстрее других.
+                </div>
+
+            </div>
+
+            <div class="hunt-gallery">
+
+                <img src="img/wiki/hunt/hunt.jpg" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+
+                </div>
+                <div class="wiki-category">
+
+    <div class="wiki-category-header"
+        onclick="toggleFactionCategory(this)">
+
+        <h2>Архант</h2>
+
+        <button class="wiki-open-btn">
+            Открыть
+        </button>
+
+    </div>
+
+    <div class="wiki-category-content">
+
+        <div class="arthunt-box">
+
+            <div class="arthunt-info">
+
+                <h3>
+                    Поиск артефактов
+                </h3>
+
+                <p>
+                    Аномалии теперь —
+                    не просто декор.
+                </p>
+
+                <p>
+                    Покупай детектор,
+                    ищи сигналы
+                    и добывай редкие артефакты.
+                </p>
+
+                <div class="arthunt-warning">
+
+                    Повезёт —
+                    вынесешь очень дорогой лут.
+                </div>
+
+                <div class="arthunt-guide">
+
+                    <h4>
+                        Как искать артефакты?
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Возьми детектор в руки
+                        </li>
+
+                        <li>
+                            Включи его
+                        </li>
+
+                        <li>
+                            Подойди к аномалии
+                        </li>
+
+                        <li>
+                            Если внутри есть артефакт —
+                            детектор начнет издавать
+                            характерный пищащий звук
+                        </li>
+
+                        <li>
+                            Подходи ближе к аномалии,
+                            пока артефакт не появится
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="arthunt-gallery">
+
+                <img src="img/wiki/art/art1.jpg" alt="">
+                <img src="img/wiki/art/art2.jpg" alt="">
+                <img src="img/wiki/art/art3.jpg" alt="">
+                <img src="img/wiki/art/art4.jpg" alt="">
+                <img src="img/wiki/art/art5.jpg" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+
+                </div>
+                <div class="wiki-category">
+
+    <div class="wiki-category-header"
+        onclick="toggleFactionCategory(this)">
+
+        <h2>Доставка паков</h2>
+
+        <button class="wiki-open-btn">
+            Открыть
+        </button>
+
+    </div>
+
+    <div class="wiki-category-content">
+
+        <div class="packs-box">
+
+            <div class="packs-info">
+
+                <h3>
+                    Работа курьером в ЧЗО
+                </h3>
+
+                <p>
+                    Бери паки у NPC
+                    и доставляй их
+                    в другие точки Зоны.
+                </p>
+
+                <p>
+                    Чем дальше маршрут —
+                    тем выше заработок
+                    и опаснее путь.
+                </p>
+
+                <div class="packs-warning">
+
+                    Во время доставки
+                    вам могут встретиться:
+                    мутанты,
+                    аномалии
+                    и другие сталкеры.
+                    Беря паки на доставку вы берете все риски на себя.
+                </div>
+
+            </div>
+
+            <div class="packs-routes">
+
+                <h3>
+                    Точки выдачи и сдачи паков
+                </h3>
+
+                <div class="packs-grid">
+
+                    <div class="pack-location">
+                        Деревня новичков
+                    </div>
+
+                    <div class="pack-location">
+                        Нейтралы
+                    </div>
+
+                    <div class="pack-location">
+                        Долг
+                    </div>
+
+                    <div class="pack-location">
+                        МБУ
+                    </div>
+
+                    <div class="pack-location">
+                        Бар
+                    </div>
+
+                    <div class="pack-location">
+                        Свобода
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="packs-gallery">
+
+                <img src="img//wiki/paki/pak1.jpg" alt="">
+                <img src="img//wiki/paki/pak2.jpg" alt="">
+                <img src="img//wiki/paki/pak3.jpg" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+
+                </div>
+                <div class="wiki-category">
+
+    <div class="wiki-category-header"
+        onclick="toggleFactionCategory(this)">
+
+        <h2>Прикопы</h2>
+
+        <button class="wiki-open-btn">
+            Открыть
+        </button>
+
+    </div>
+
+    <div class="wiki-category-content">
+
+        <div class="buried-box">
+
+            <div class="buried-info">
+
+                <h3>
+                    Скрытые тайники под землей
+                </h3>
+
+                <p>
+                    Исследуй разные части Зоны
+                    и ищи подозрительные бугорки —
+                    это и есть прикопы.
+                </p>
+
+                <p>
+                    Внутри можно найти
+                    различный лут
+                    разных тиров:
+                    от обычного хабара
+                    до действительно редких вещей.
+                </p>
+
+                <div class="buried-warning">
+
+                    Для раскопки понадобится:
+                    лопата и внимательность.
+                </div>
+
+            </div>
+
+            <div class="buried-locations">
+
+                <h3>
+                    Точки нахождения прикопов
+                </h3>
+
+                <div class="buried-grid">
+
+                    <div class="buried-location">
+                        Болота
+                    </div>
+
+                    <div class="buried-location">
+                        Темная лощина
+                    </div>
+
+                    <div class="buried-location">
+                        Свалка
+                    </div>
+
+                    <div class="buried-location">
+                        Свалка техники
+                    </div>
+
+                    <div class="buried-location">
+                        Янтарь
+                    </div>
+
+                    <div class="buried-location">
+                        Мертвый город
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="buried-gallery">
+
+                <img src="img//wiki/prikop/prik1.jpg" alt="">
+                <img src="img//wiki/prikop/prik2.jpg" alt="">
+
+            </div>
+
+            <div class="buried-spawns">
+
+    <h3>
+        Возможные места появления прикопов
+    </h3>
+
+    <div class="buried-spawn-gallery">
+
+        <div class="spawn-card">
+
+            <img src="img/wiki/prikop/spawn1.jpg" alt="">
+
+            <div class="spawn-card-info">
+
+                <h4>Янатрь</h4>
+
+                <p>
+                    За заводом в низине.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="spawn-card">
+
+            <img src="img/wiki/prikop/spawn2.jpg" alt="">
+
+            <div class="spawn-card-info">
+
+                <h4>Мертвый город</h4>
+
+                <p>
+                    Возможный прикоп
+                    за мертвым городом. неподалеку деревни.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="spawn-card">
+
+            <img src="img/wiki/prikop/spawn3.jpg" alt="">
+
+            <div class="spawn-card-info">
+
+                <h4>Свалка техники</h4>
+
+                <p>
+                    Тайник среди
+                    холмов с техникой.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="spawn-card">
+
+            <img src="img/wiki/prikop/spawn4.jpg" alt="">
+
+            <div class="spawn-card-info">
+
+                <h4>Темная Долина - Свалка</h4>
+
+                <p>
+                    Возможный спавн
+                    возле аномальных полей в болоте.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="spawn-card">
+
+            <img src="img/wiki/prikop/spawn5.jpg" alt="">
+
+            <div class="spawn-card-info">
+
+                <h4>Болота</h4>
+
+                <p>
+                    Прикопы в лесу и на холмах.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="spawn-card">
+
+            <img src="img/wiki/prikop/spawn6.jpg" alt="">
+
+            <div class="spawn-card-info">
+
+                <h4>Темная Лощина</h4>
+
+                <p>
+                    Тайники в лесу
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="spawn-card">
+
+            <img src="img/wiki/prikop/spawn7.jpg" alt="">
+
+            <div class="spawn-card-info">
+
+                <h4>Темная Лощина</h4>
+
+                <p>
+                    Скрытый прикоп
+                    рядом с камышами.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="spawn-card">
+
+            <img src="img/wiki/prikop/spawn8.jpg" alt="">
+
+            <div class="spawn-card-info">
+
+                <h4>Темная Долина</h4>
+
+                <p>
+                    Возможный тайник
+                    на свалке.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+                </div>
+            </div>        
+        </div>
+    </section>
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <p>
+            © 2026 ODYSSEYA STALKER RP.
+            Все права защищены.
+        </p>
+
+        <p>
+            S.T.A.L.K.E.R. и связанные материалы
+            принадлежат GSC Game World.
+        </p>
+
+    </div>
+
+</footer>
+</body>
+<script>
+
+function toggleFactionCategory(element){
+
+    const category =
+        element.closest('.wiki-category');
+
+    category.classList.toggle('active');
+
+    const text =
+        element.querySelector('.wiki-open-btn');
+
+    if(category.classList.contains('active')){
+        text.innerText = 'Скрыть';
+    }
+    else{
+        text.innerText = 'Открыть';
+    }
+
+}
+
+function openFaction(event,factionId){
+
+    const wrapper =
+        event.currentTarget
+        .closest('.wiki-category');
+
+    wrapper
+    .querySelectorAll('.faction-content')
+    .forEach(content => {
+
+        content.classList.remove('active-faction');
+
+    });
+
+    wrapper
+    .querySelectorAll('.faction-btn')
+    .forEach(button => {
+
+        button.classList.remove('active');
+
+    });
+
+    wrapper
+    .querySelector('#' + factionId)
+    .classList.add('active-faction');
+
+    event.currentTarget.classList.add('active');
+
+}
+
+</script>
+
+</html>

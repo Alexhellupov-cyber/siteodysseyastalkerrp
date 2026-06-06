@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>ADMIN PANEL</title>
+
+<link rel="icon" type="image/png" href="/img/logo.png">
+<link rel="stylesheet" href="css/cabinet.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="admin-page">
+
+<div id="admin-login">
+
+    <h1 class="admin-title">
+
+        ADMIN LOGIN
+
+    </h1>
+    <a href="/auth/steam"
+   class="steam-login-btn">
+
+    ВОЙТИ ЧЕРЕЗ STEAM
+
+</a>
+    <input type="password"
+           id="admin-password"
+           class="admin-input"
+           placeholder="Пароль">
+
+    <button onclick="adminLogin()"
+            class="admin-btn">
+
+        Войти
+
+    </button>
+
+</div>
+
+<div id="admin-panel"
+     style="display:none;">
+
+    <h1 class="admin-title">
+
+        ADMIN PANEL
+
+    </h1>
+
+    <input type="text"
+           id="steamid"
+           class="admin-input"
+           placeholder="SteamID">
+
+    <button onclick="loadUser()"
+            class="admin-btn">
+
+        Найти игрока
+
+    </button>
+
+    <div id="user-data"
+         class="admin-user">
+
+    </div>
+
+</div>
+
+<script>
+async function adminLogin(){
+
+    const password =
+
+    document
+    .getElementById(
+        'admin-password'
+    ).value;
+
+    const res =
+    await fetch(
+        '/admin/login',
+        {
+
+            method:'POST',
+
+            headers:{
+                'Content-Type':
+                'application/json'
+            },
+
+            body:JSON.stringify({
+                password
+            })
+
+        }
+    );
+    const data =
+    await res.json();
+
+    if(data.success){
+
+        document
+        .getElementById(
+            'admin-login'
+        )
+        .style.display =
+        'none';
+
+        document
+        .getElementById(
+            'admin-panel'
+        )
+        .style.display =
+        'block';
+
+    }else{
+
+        window.location.href =
+'/index.html';
+
+    }
+
+}
+
+async function loadUser(){
+    
+    const steamid =
+    document
+    .getElementById('steamid')
+    .value;
+
+    const res =
+    await fetch('/admin/user/' + steamid);
+
+    const user =
+    await res.json();
+
+    if(user.error){
+
+        alert(user.error);
+
+        return;
+    }
+
+    document
+    .getElementById('user-data')
+    .innerHTML = `
+
+        <div class="admin-card">
+            <div class="admin-card player-card">
+
+    <img
+    src="${user.avatar}"
+    class="player-avatar">
+
+    <div class="player-info">
+
+        <h2>
+            ${user.name}
+        </h2>
+
+        <p>
+            ${steamid}
+        </p>
+
+    </div>
+
+</div>
+            <h2>
+                Баланс
+            </h2>
+
+            <input type="number"
+                   id="balance-input"
+                   class="admin-input"
+                   value="${user.balance}">
+
+            <button onclick="saveBalance('${steamid}')"
+                    class="admin-btn">
+
+                Сохранить баланс
+
+            </button>
+
+        </div>
+
+        <div class="admin-card">
+
+            <h2>
+                Добавить предмет
+            </h2>
+
+            <input type="text"
+                   id="item-input"
+                   class="admin-input"
+                   placeholder="Название предмета">
+
+            <button onclick="addItem('${steamid}')"
+                    class="admin-btn">
+
+                Добавить
+
+            </button>
+
+        </div>
+
+        <div class="admin-card">
+
+            <h2>
+                Инвентарь
+            </h2>
+
+            <div class="inventory-list">
+
+                ${user.inventory.map(item=>
+
+                    `<div class="inventory-tag">
+
+    <span>
+        ${item.name}
+    </span>
+
+    <button
+    onclick="removeItem(
+        '${steamid}',
+        '${item.id}'
+    )"
+    class="remove-item-btn">
+
+        ✕
+        
+    </button>
+
+</div>`
+
+                ).join('')}
+
+            </div>
+
+        </div>
+
+    `;
+
+}
+
+async function saveBalance(steamid){
+
+    const balance =
+    document
+    .getElementById('balance-input')
+    .value;
+
+    await fetch('/admin/balance',{
+
+        method:'POST',
+
+        headers:{
+            'Content-Type':'application/json'
+        },
+
+        body:JSON.stringify({
+            steamid,
+            balance
+        })
+
+    });
+
+    alert('Баланс обновлен');
+
+}
+
+async function addItem(steamid){
+
+    const item =
+    document
+    .getElementById('item-input')
+    .value;
+
+    await fetch('/admin/add-item',{
+
+        method:'POST',
+
+        headers:{
+            'Content-Type':'application/json'
+        },
+
+        body:JSON.stringify({
+            steamid,
+            item
+        })
+
+    });
+
+    alert('Предмет добавлен');
+
+    loadUser();
+
+}
+async function removeItem(
+    steamid,
+    itemId
+){
+
+    await fetch(
+        '/admin/remove-item',
+        {
+
+            method:'POST',
+
+            headers:{
+                'Content-Type':
+                'application/json'
+            },
+
+            body:JSON.stringify({
+
+                steamid,
+                itemId
+
+            })
+
+        }
+    );
+
+    loadUser();
+
+}
+
+</script>
+
+</body>
+</html>

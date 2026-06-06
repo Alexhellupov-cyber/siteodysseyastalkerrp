@@ -1,0 +1,3044 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/img/logo.png">
+<title>Магазин</title>
+
+<link rel="stylesheet"
+      href="css/shop.css">
+
+</head>
+
+<body>
+
+<div class="shop-page">
+
+    <aside class="shop-sidebar">
+
+        <h2>
+            КАТЕГОРИИ
+        </h2>
+
+        <button class="category-btn active-category"
+                onclick="showCategory(event,'all')">
+
+            Все
+
+        </button>
+
+        <button class="category-btn"
+                onclick="showCategory(event,'furniture')">
+
+            Фурнитура
+
+        </button>
+
+        <button class="category-btn"
+                onclick="showCategory(event,'ammonition')">
+
+            Снаряжение
+
+        </button>
+
+        <button class="category-btn"
+                onclick="showCategory(event,'vehicles')">
+
+            Машины
+
+        </button>
+
+        <button class="category-btn"
+                onclick="showCategory(event,'forvehicle')">
+
+            Для машины
+
+        </button>
+        <button class="category-btn"
+                onclick="showCategory(event,'weapons')">
+
+            Оружие
+
+        </button>
+        <button class="category-btn"
+                onclick="showCategory(event,'forweapons')">
+
+            Обвесы для оружия
+
+        </button>
+
+    </aside>
+
+    <main class="shop-content">
+
+        <div class="shop-top">
+
+            <h1>
+                МАГАЗИН
+            </h1>
+
+            <div class="shop-top-right">
+
+                <div class="shop-balance">
+
+                    Баланс:
+                    <span id="balance">
+                        0 RU
+                    </span>
+
+                </div>
+
+                <a href="cabinet.html"
+                class="profile-btn">
+
+                    <img id="profile-avatar"
+                        class="profile-avatar">
+
+                    <span id="profile-name">
+
+                        STALKER
+
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="shop-grid"
+             id="shop-grid">
+
+            <!-- ITEMS -->
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/ak103.png">
+                <h3>
+                    AK-103
+                </h3>
+
+                <p>
+                    900 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_ak103',
+
+                        title:'AK-103',
+
+                        price:'900 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 7.62x39 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/ak103.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/ak12.png">
+                <h3>
+                    AK 12
+                </h3>
+
+                <p>
+                    700 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_ak12',
+
+                        title:'AK 12',
+
+                        price:'700 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 5.45x39 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/ak12.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/akm.png">
+                <h3>
+                    AKM
+                </h3>
+
+                <p>
+                    1.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_akm',
+
+                        title:'AKM',
+
+                        price:'1000 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 7.62x39 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/akm.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/an94.png">
+                <h3>
+                    AN-94
+                </h3>
+
+                <p>
+                    600 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_an94',
+
+                        title:'AN-94',
+
+                        price:'600 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 5.45x39 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/an94.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/asval.png">
+                <h3>
+                    AS VAL
+                </h3>
+
+                <p>
+                    1.250 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_asval',
+
+                        title:'AS VAL',
+
+                        price:'1.250 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 9x39 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/asval.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/aug.png">
+                <h3>
+                    AUG
+                </h3>
+
+                <p>
+                    800 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_aug',
+
+                        title:'AUG',
+
+                        price:'800 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 5.56x45 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/aug.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/famas.png">
+                <h3>
+                    FAMAS
+                </h3>
+
+                <p>
+                    1.250 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_famas',
+
+                        title:'FAMAS',
+
+                        price:'1.250 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 5.56x45 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/famas.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/m4a1.png">
+                <h3>
+                    M4A1
+                </h3>
+
+                <p>
+                    800 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_m4a1',
+
+                        title:'M4A1',
+
+                        price:'800 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 5.56x45 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/m4a1.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/mdar.png">
+                <h3>
+                    M DAR
+                </h3>
+
+                <p>
+                    1.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_mdar',
+
+                        title:'M DAR',
+
+                        price:'1.000 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 5.56x45 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/mdar.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/mk47.png">
+                <h3>
+                    MK 47
+                </h3>
+
+                <p>
+                    1.250 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_mk47',
+
+                        title:'MK 47',
+
+                        price:'1.250 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 7.62x39 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/mk47.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/vepr.png">
+                <h3>
+                    VEPR
+                </h3>
+
+                <p>
+                    1.200 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_vepr',
+
+                        title:'VEPR',
+
+                        price:'1.200 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 12 мм, магазин на 30 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/vepr.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="weapons">
+
+                <img src="img/shop/guns/vss.png">
+                <h3>
+                    VSS
+                </h3>
+
+                <p>
+                    1.750 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'weapon_vss',
+
+                        title:'VSS',
+
+                        price:'1.750 RU',
+
+                        description:`
+                        Отличный автомат для начинающих сталкеров. Имеет высокую скорострельность и хорошую точность на средних дистанциях.
+                        Калибр 9x39 мм, магазин на 10 патронов. Имеет возможность установки различных обвесов для улучшения характеристик.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/vss.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/30mag762banana.png">
+                <h3>
+                    30-патронный магазин 7.62x39 мм БАНАН
+                </h3>
+
+                <p>
+                    200 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_30mag762banana',
+
+                        title:'30-патронный магазин 7.62x39 мм БАНАН',
+
+                        price:'200 RU',
+
+                        description:`
+                        Магазин для автоматов калибра 7.62x39 мм . Вместимость 30 патронов. Имеет удобную форму и надежную конструкцию.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/30mag762banana.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/40mag556.png">
+                <h3>
+                    40-патронный магазин 5.56x45 мм
+                </h3>
+
+                <p>
+                    300 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_40mag556',
+
+                        title:'40-патронный магазин 5.56x45 мм',
+
+                        price:'300 RU',
+
+                        description:`
+                        Магазин для автоматов калибра 5.56x45 мм, таких как M16, M4 и AK-103. Вместимость 40 патронов. Имеет удобную форму и надежную конструкцию.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/40mag556.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/40mag762.png">
+                <h3>
+                    40-патронный магазин 7.62x39 мм
+                </h3>
+
+                <p>
+                    300 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_40mag762',
+
+                        title:'40-патронный магазин 7.62x39 мм',
+
+                        price:'300 RU',
+
+                        description:`
+                        Магазин для автоматов калибра 7.62x39 мм . Вместимость 40 патронов. Имеет удобную форму и надежную конструкцию.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/40mag762.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/45mag545.png">
+                <h3>
+                    45-патронный магазин 5.45x39 мм
+                </h3>
+
+                <p>
+                    300 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_45mag545',
+
+                        title:'45-патронный магазин 5.45x39 мм',
+
+                        price:'300 RU',
+
+                        description:`
+                        Магазин для автоматов калибра 5.45x39 мм . Вместимость 45 патронов. Имеет удобную форму и надежную конструкцию.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/45mag545.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/60mag545.png">
+                <h3>
+                    60-патронный магазин 5.45x39 мм
+                </h3>
+
+                <p>
+                    350 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_60mag545',
+
+                        title:'60-патронный магазин 5.45x39 мм',
+
+                        price:'350 RU',
+
+                        description:`
+                        Магазин для автоматов калибра 5.45x39 мм . Вместимость 60 патронов. Имеет удобную форму и надежную конструкцию.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/60mag545.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/ammo545.png">
+                <h3>
+                    Патроны 5.45x39 мм (200шт)
+                </h3>
+
+                <p>
+                    100 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_ammo545',
+
+                        title:'Патроны 5.45x39 мм (200шт)',
+
+                        price:'100 RU',
+
+                        description:`
+                        Патроны для автоматов калибра 5.45x39 мм. Вместимость 200 патронов. Имеют высокую точность и надежность.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/ammo545.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/ammo556.png">
+                <h3>
+                    Патроны 5.56x45 мм (200шт)
+                </h3>
+
+                <p>
+                    100 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_ammo556',
+
+                        title:'Патроны 5.56x45 мм (200шт)',
+
+                        price:'100 RU',
+
+                        description:`
+                        Патроны для автоматов калибра 5.56x45 мм. Вместимость 200 патронов. Имеют высокую точность и надежность.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/ammo556.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/ammo76239.png">
+                <h3>
+                    Патроны 7.62x39 мм (200шт)
+                </h3>
+
+                <p>
+                    150 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_ammo76239',
+
+                        title:'Патроны 7.62x39 мм (200шт)',
+
+                        price:'150 RU',
+
+                        description:`
+                        Патроны для автоматов калибра 7.62x39 мм.Вместимость 200 патронов. Имеют высокую точность и надежность.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/ammo76239.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/ammo76254.png">
+                <h3>
+                    Патроны 7.62x54 мм (200шт)
+                </h3>
+
+                <p>
+                    150 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_ammo76254',
+
+                        title:'Патроны 7.62x54 мм (200шт)',
+
+                        price:'150 RU',
+
+                        description:`
+                        Патроны для автоматов калибра 7.62x54 мм.Вместимость 200 патронов. Имеют высокую точность и надежность.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/ammo76254.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/ammo939.png">
+                <h3>
+                    Патроны 9x39 мм (200шт)
+                </h3>
+
+                <p>
+                    200 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_ammo939',
+
+                        title:'Патроны 9x39 мм (200шт)',
+
+                        price:'200 RU',
+
+                        description:`
+                        Патроны для автоматов калибра 9x39 мм,Вместимость 200 патронов. Имеют высокую точность и надежность.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/ammo939.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/suppresor545.png">
+                <h3>
+                    Глушитель для 5.45x39 мм
+                </h3>
+
+                <p>
+                    1000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_suppresor545',
+
+                        title:'Глушитель для 5.45x39 мм',
+
+                        price:'1000 RU',
+
+                        description:`
+                        Глушитель для автоматов калибра 5.45x39 мм . Обеспечивает снижение уровня шума при стрельбе.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/suppresor545.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/suppresor545v2.png">
+                <h3>
+                    Глушитель для 5.45x39 мм
+                </h3>
+
+                <p>
+                    1000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_suppresor545v2',
+
+                        title:'Глушитель для 5.45x39 мм',
+
+                        price:'1000 RU',
+
+                        description:`
+                        Глушитель для автоматов калибра 5.45x39 мм . Обеспечивает снижение уровня шума при стрельбе.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/suppresor545v2.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/suppresor556.png">
+                <h3>
+                    Глушитель для 5.56x45 мм
+                </h3>
+
+                <p>
+                    1000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_suppresor556',
+
+                        title:'Глушитель для 5.56x45 мм',
+
+                        price:'1000 RU',
+
+                        description:`
+                        Глушитель для автоматов калибра 5.56x45 мм,Обеспечивает снижение уровня шума при стрельбе.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/suppresor556.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forweapons">
+
+                <img src="img/shop/guns/suppresorunivers.png">
+                <h3>
+                    Глушитель Универсальный, подходит почти под все оружие
+                </h3>
+
+                <p>
+                    1300 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forweapons_suppresorunivers',
+
+                        title:'Глушитель Универсальный, подходит почти под все оружие',
+
+                        price:'1300 RU',
+
+                        description:`
+                        Глушитель Универсальный, подходит почти под все оружие. Такие как AK-103, AKM и AR. Обеспечивает снижение уровня шума при стрельбе.
+                        `,
+
+                    images:[
+
+                        'img/shop/guns/suppresorunivers.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+             <div class="shop-card" data-category="forvehicle">
+
+                <img src="img/shop/forvehicle/spark.png">
+                <h3>
+                    Свеча зажигания
+                </h3>
+
+                <p>
+                    500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forvehicle_spark',
+
+                        title:'Свеча зажигания',
+
+                        price:'500 RU',
+
+                        description:`
+                        Простая свеча зажигания, может использоваться для запуска двигателя.
+                        `,
+
+                    images:[
+
+                        'img/shop/forvehicle/spark.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forvehicle">
+
+                <img src="img/shop/forvehicle/caraccum.png">
+                <h3>
+                    Аккумулятор для автомобиля
+                </h3>
+
+                <p>
+                    500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forvehicle_caraccum',
+
+                        title:'Аккумулятор для автомобиля',
+
+                        price:'500 RU',
+
+                        description:`
+                        Простой аккумулятор для автомобиля, может использоваться для запуска двигателя.
+                        `,
+
+                    images:[
+
+                        'img/shop/forvehicle/caraccum.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forvehicle">
+
+                <img src="img/shop/forvehicle/koleso.png">
+                <h3>
+                    Колесо (для любого автомобиля)
+                </h3>
+
+                <p>
+                    1.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forvehicle_koleso',
+
+                        title:'Колесо (для любого автомобиля)',
+
+                        price:'1.000 RU',
+
+                        description:`
+                        Простое колесо, может использоваться для замены поврежденного колеса.
+                        Чтобы получить нужное колесо - создайте тикет.
+                        `,
+
+                    images:[
+
+                        'img/shop/forvehicle/koleso.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forvehicle">
+
+                <img src="img/shop/forvehicle/radiator.png">
+                <h3>
+                    Радиатор
+                </h3>
+
+                <p>
+                    500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forvehicle_radiator',
+
+                        title:'Радиатор',
+
+                        price:'500 RU',
+
+                        description:`
+                        Простой радиатор, может использоваться для охлаждения двигателя.
+                        `,
+
+                    images:[
+
+                        'img/shop/forvehicle/radiator.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forvehicle">
+
+                <img src="img/shop/forvehicle/repairkit.png">
+                <h3>
+                    Комплект для ремонта шин
+                </h3>
+
+                <p>
+                    200 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forvehicle_repairkit',
+
+                        title:'Комплект для ремонта шин',
+
+                        price:'200 RU',
+
+                        description:`
+                        Простой комплект для ремонта шин, может использоваться для замены поврежденных шин.
+                        `,
+
+                    images:[
+
+                        'img/shop/forvehicle/repairkit.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forvehicle">
+
+                <img src="img/shop/forvehicle/truckaccum.png">
+                <h3>
+                    Аккумулятор для грузовика
+                </h3>
+
+                <p>
+                    500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forvehicle_truckaccum',
+
+                        title:'Аккумулятор для грузовика',
+
+                        price:'500 RU',
+
+                        description:`
+                        Простой аккумулятор, может использоваться для запуска двигателя грузовика.
+                        `,
+
+                    images:[
+
+                        'img/shop/forvehicle/truckaccum.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="forvehicle">
+
+                <img src="img/shop/forvehicle/pochinka.png">
+                <h3>
+                    Полная починка авто
+                </h3>
+
+                <p>
+                    2000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'forvehicle_pochinka',
+
+                        title:'Полная починка авто',
+
+                        price:'2000 RU',
+
+                        description:`
+                        Полная починка автомобиля, включая замену изношенных деталей и тестирование всех систем.
+                        `,
+
+                    images:[
+
+                        'img/shop/forvehicle/pochinka.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="furniture">
+
+                <img src="img/shop/furnitura/barrel.png">
+                <h3>
+                    Бочка
+                </h3>
+
+                <p>
+                    500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'furnitura_barrel',
+
+                        title:'Бочка',
+
+                        price:'500 RU',
+
+                        description:`
+                        Простая бочка, может использоваться для хранения вещей или создания укрытий в зоне.
+                        Имеет 150 литров внутреннего объема для хранения предметов.
+                        `,
+
+                    images:[
+
+                        'img/shop/furnitura/barrel.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="furniture">
+
+                <img src="img/shop/furnitura/create1.png">
+                <h3>
+                    Ящик
+                </h3>
+
+                <p>
+                    650 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'furnitura_create1',
+
+                        title:'Ящик',
+
+                        price:'650 RU',
+
+                        description:`
+                        Простой ящик, может использоваться для хранения вещей или создания укрытий в зоне.
+                        Имеет 170 литров внутреннего объема для хранения предметов.
+                        `,
+
+                    images:[
+
+                        'img/shop/furnitura/create1.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="furniture">
+
+                <img src="img/shop/furnitura/gunwall1.png">
+                <h3>
+                    Стенд для оружия
+                </h3>
+
+                <p>
+                    1.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'furnitura_gunwall1',
+
+                        title:'Стенд для оружия',
+
+                        price:'1.000 RU',
+
+                        description:`
+                        Стенд для оружия, может использоваться для хранения оружия или создания укрытий в зоне.
+                        Имеет 200 литров внутреннего объема для хранения предметов.
+                        `,
+
+                    images:[
+
+                        'img/shop/furnitura/gunwall1.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="furniture">
+
+                <img src="img/shop/furnitura/locker01.png">
+                <h3>
+                    Шкаф
+                </h3>
+
+                <p>
+                    650 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'furnitura_locker01',
+
+                        title:'Шкаф',
+
+                        price:'650 RU',
+
+                        description:`
+                        Простой шкаф, может использоваться для хранения вещей или создания укрытий в зоне.
+                        Имеет 100 литров внутреннего объема для хранения предметов.
+                        Возможность повесить 1 сет экипировки.
+                        `,
+
+                    images:[
+
+                        'img/shop/furnitura/locker01.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="furniture">
+
+                <img src="img/shop/furnitura/locker02.png">
+                <h3>
+                    Шкаф в2
+                </h3>
+
+                <p>
+                    1.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'furnitura_locker02',
+
+                        title:'Шкаф в2',
+
+                        price:'1.500 RU',
+
+                        description:`
+                        Простой шкаф, может использоваться для хранения вещей или создания укрытий в зоне.
+                        Имеет 100 литров внутреннего объема для хранения предметов.
+                        Возможность повесить 1 сет экипировки и есть 5 мест для хранения оружия.
+                        `,
+
+                    images:[
+
+                        'img/shop/furnitura/locker02.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="furniture">
+
+                <img src="img/shop/furnitura/locker03.png">
+                <h3>
+                    Шкаф в3
+                </h3>
+
+                <p>
+                    600 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'furnitura_locker03',
+
+                        title:'Шкаф в3',
+
+                        price:'600 RU',
+
+                        description:`
+                        Простой шкаф, может использоваться для хранения вещей или создания укрытий в зоне.
+                        Имеет 60 литров внутреннего объема для хранения предметов.
+                        Возможность повесить 1 сет экипировки и есть 2 мест для хранения оружия.
+                        `,
+
+                    images:[
+
+                        'img/shop/furnitura/locker03.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="ammonition">
+
+                <img src="img/shop/snaraga/otklik.png">
+                <h3>
+                    Детектор "Отклик"
+                </h3>
+
+                <p>
+                    500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'detektor_otklik',
+
+                        title:'Детектор Отклик',
+
+                        price:'500 RU',
+
+                        description:`
+                        Хороший детектор для начинающих сталкеров. Показывает аномалии и артефакты в радиусе 20 метров. Имеет простую индикацию и удобен в использовании.
+                        `,
+
+                    images:[
+
+                        'img/shop/snaraga/otklik.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="ammonition">
+
+                <img src="img/shop/snaraga/bear.png">
+                <h3>
+                    Детектор "Медведь"
+                </h3>
+
+                <p>
+                    1.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'detektor_medved',
+
+                        title:'Детектор Медведь',
+
+                        price:'1.000 RU',
+
+                        description:`
+                        Хороший детектор для опытных сталкеров. Имеет простую индикацию и удобен в использовании.
+                        `,
+
+                    images:[
+
+                        'img/shop/snaraga/bear.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="ammonition">
+
+                <img src="img/shop/snaraga/velas.png">
+                <h3>
+                    Детектор "Велес"
+                </h3>
+
+                <p>
+                    1.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'detektor_velas',
+
+                        title:'Детектор Велес',
+
+                        price:'1.500 RU',
+
+                        description:`
+                        Хороший детектор для продвинутых сталкеров. Имеет простую индикацию и удобен в использовании.
+                        `,
+
+                    images:[
+
+                        'img/shop/snaraga/velas.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="ammonition">
+
+                <img src="img/shop/snaraga/svarog.png">
+                <h3>
+                    Детектор "Сварог"
+                </h3>
+
+                <p>
+                    2.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'detektor_svarog',
+
+                        title:'Детектор Сварог',
+
+                        price:'2.000 RU',
+
+                        description:`
+                        Хороший детектор для самых опытных сталкеров. Имеет простую индикацию и удобен в использовании.
+                        `,
+
+                    images:[
+
+                        'img/shop/snaraga/svarog.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="ammonition">
+
+                <img src="img/shop/snaraga/m40gasmask.png">
+                <h3>
+                    Противогаз М40
+                </h3>
+
+                <p>
+                    2.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'protivogaz_m40',
+
+                        title:'Противогаз М40',
+
+                        price:'2.000 RU',
+
+                        description:`
+                        Хороший противогаз для опытных сталкеров. на этикетке написано что держит 450 мКз.
+                        `,
+
+                    images:[
+
+                        'img/shop/snaraga/m40gasmask.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="ammonition">
+
+                <img src="img/shop/snaraga/avcgasmask.png">
+                <h3>
+                    Противогаз AVC
+                </h3>
+
+                <p>
+                    1.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'protivogaz_avc',
+
+                        title:'Противогаз AVC',
+
+                        price:'1.500 RU',
+
+                        description:`
+                        Хороший противогаз для опытных сталкеров. на этикетке написано что держит 400 мКз.
+                        `,
+
+                    images:[
+
+                        'img/shop/snaraga/avcgasmask.png'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/BMW_525i_E34/bmw1.jpg">
+
+                <h3>
+                    BMW E34
+                </h3>
+
+                <p>
+                    4.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'bmw',
+
+                        title:'BMW E34',
+
+                        price:'4.500 RU',
+
+                        description:`
+                        4 места 
+                        400 литров багажника для перевозки добычи.
+                        Мощный спортивный седан.
+                        Отлично подходит для
+                        быстрых рейдов по зоне.
+                        Имеет большой багажник
+                        и хорошую скорость.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/BMW_525i_E34/bmw1.jpg',
+                        'img/shop/cars/BMW_525i_E34/bmw2.jpg',
+                        'img/shop/cars/BMW_525i_E34/bmw3.jpg',
+                        'img/shop/cars/BMW_525i_E34/bmw4.jpg',
+                        'img/shop/cars/BMW_525i_E34/bmw5.jpg',
+                        'img/shop/cars/BMW_525i_E34/bmw6.jpg',
+                        'img/shop/cars/BMW_525i_E34/bmw7.jpg',
+                        'img/shop/cars/BMW_525i_E34/bmw8.jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/BRDM2_RF/brdm.jpg">
+
+                <h3>
+                    BRDM-2
+                </h3>
+
+                <p>
+                    7.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'brdm',
+
+                        title:'BRDM-2',
+
+                        price:'7.000 RU',
+
+                        description:`
+                        4 места 
+                        1000 литров багажника для перевозки добычи.
+                        Увереный советский броневик.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/BRDM2_RF/brdm.jpg',
+                        'img/shop/cars/BRDM2_RF/brdm1.jpg',
+                        'img/shop/cars/BRDM2_RF/brdm2.jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/BTR_80/btr80 (1).jpg">
+
+                <h3>
+                    BTR-80
+                </h3>
+
+                <p>
+                    8.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'btr80',
+
+                        title:'BTR-80',
+
+                        price:'8.000 RU',
+
+                        description:`
+                        4 места 
+                        1000 литров багажника для перевозки добычи.
+                        Увереный советский броневик.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/BTR_80/btr80 (1).jpg',
+                        'img/shop/cars/BTR_80/btr80 (2).jpg',
+                        'img/shop/cars/BTR_80/btr80 (3).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/BTR_80_P/btr80 (1).jpg">
+
+                <h3>
+                    BTR-80 Транспортный
+                </h3>
+
+                <p>
+                    13.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'btr80p',
+
+                        title:'BTR-80 Транспортный',
+
+                        price:'13.000 RU',
+
+                        description:`
+                        10 мест 
+                        1000 литров багажника для перевозки добычи.
+                        Советский пихотный броневик для переброски бойцов в опасные места.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/BTR_80/btr80 (1).jpg',
+                        'img/shop/cars/BTR_80/btr80 (2).jpg',
+                        'img/shop/cars/BTR_80/btr80 (3).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/GAZ_3110_volga/volga (1).jpg">
+
+                <h3>
+                    GAZ-3110 Волга
+                </h3>
+
+                <p>
+                    4.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'volga',
+
+                        title:'GAZ-3110 Волга',
+
+                        price:'4.000 RU',
+
+                        description:`
+                        4 места 
+                        500 литров багажника для перевозки добычи.
+                        Советская быстрая и надежная машина для перемещения по зоне.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/GAZ_3110_volga/volga (1).jpg',
+                        'img/shop/cars/GAZ_3110_volga/volga (2).jpg',
+                        'img/shop/cars/GAZ_3110_volga/volga (3).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/GAZ_66/gaz66 (1).jpg">
+
+                <h3>
+                    GAZ-66
+                </h3>
+
+                <p>
+                    6.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'gaz66',
+
+                        title:'GAZ-66',
+
+                        price:'6.500 RU',
+
+                        description:`
+                        6 мест 
+                        1000 литров багажника для перевозки добычи.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/GAZ_66/gaz66 (1).jpg',
+                        'img/shop/cars/GAZ_66/gaz66 (2).jpg',
+                        'img/shop/cars/GAZ_66/gaz66 (3).jpg',
+                        'img/shop/cars/GAZ_66/gaz66 (4).jpg',
+                        'img/shop/cars/GAZ_66/gaz66 (5).jpg',
+                        'img/shop/cars/GAZ_66/gaz66 (6).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/IJ_2125_Kombi/ij2125 (1).jpg">
+
+                <h3>
+                    IJ-2125 Комби
+                </h3>
+
+                <p>
+                    4.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'ij2125',
+
+                        title:'IJ-2125 Комби',
+
+                        price:'4.500 RU',
+
+                        description:`
+                        4 места 
+                        400 литров багажника для перевозки добычи.
+                        Обычная семенная машина для перемещения по зоне и перевозки небольших грузов.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/IJ_2125_Kombi/ij2125 (1).jpg',
+                        'img/shop/cars/IJ_2125_Kombi/ij2125 (2).jpg',
+                        'img/shop/cars/IJ_2125_Kombi/ij2125 (3).jpg',
+                        'img/shop/cars/IJ_2125_Kombi/ij2125 (4).jpg',
+                        'img/shop/cars/IJ_2125_Kombi/ij2125 (5).jpg',
+                        'img/shop/cars/IJ_2125_Kombi/ij2125 (6).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/IJ_2140_SL/iz2140 (1).jpg">
+
+                <h3>
+                    IJ-2140 SL
+                </h3>
+
+                <p>
+                    4.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'ij2140',
+
+                        title:'IJ-2140 SL',
+
+                        price:'4.500 RU',
+
+                        description:`
+                        4 места 
+                        500 литров багажника для перевозки добычи.
+                        Советская быстрая и надежная машина для перемещения по зоне.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/IJ_2140_SL/iz2140 (1).jpg',
+                        'img/shop/cars/IJ_2140_SL/iz2140 (2).jpg',
+                        'img/shop/cars/IJ_2140_SL/iz2140 (3).jpg',
+                        'img/shop/cars/IJ_2140_SL/iz2140 (4).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/Land_Rover_Defender_110/landrover (1).jpg">
+
+                <h3>
+                    Land Rover Defender 110
+                </h3>
+
+                <p>
+                    5.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'landrover',
+
+                        title:'Land Rover Defender 110',
+
+                        price:'5.000 RU',
+
+                        description:`
+                        4 места 
+                        600 литров багажника для перевозки добычи.
+                        Мощный внедорожник.
+                        Отлично подходит для
+                        быстрых рейдов по зоне.
+                        Имеет большой багажник
+                        и хорошую скорость.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/Land_Rover_Defender_110/landrover (1).jpg',
+                        'img/shop/cars/Land_Rover_Defender_110/landrover (2).jpg',
+                        'img/shop/cars/Land_Rover_Defender_110/landrover (3).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/LIAZ_577RF_camo/liaz.jpg">
+
+                <h3>
+                    LIAZ 577RF Camo
+                </h3>
+
+                <p>
+                    7.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'liaz',
+
+                        title:'LIAZ 577RF Camo',
+
+                        price:'7.000 RU',
+
+                        description:`
+                        12 мест 
+                        1000 литров багажника для перевозки добычи.
+                        Автобус, есть возможность ему накинуть лесты метала и он станет более защищеным
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/LIAZ_577RF_camo/liaz.jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/LUAZ_969/luaz (1).jpg">
+
+                <h3>
+                    LUAZ 969
+                </h3>
+
+                <p>
+                    3.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'luaz',
+
+                        title:'LUAZ 969',
+
+                        price:'3.500 RU',
+
+                        description:`
+                        2 места 
+                        500 литров багажника для перевозки добычи.
+                        Маленькая но довольно проходимая машинка
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/LUAZ_969/luaz (1).jpg',
+                        'img/shop/cars/LUAZ_969/luaz (2).jpg',
+                        'img/shop/cars/LUAZ_969/luaz (3).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/Niva2329/niva (1).jpg">
+
+                <h3>
+                    Niva 2329
+                </h3>
+
+                <p>
+                    3.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'niva',
+
+                        title:'Niva 2329',
+
+                        price:'3.000 RU',
+
+                        description:`
+                        2 места 
+                        600 литров багажника для перевозки добычи.
+                        Мощный спортивный седан.
+                        Отлично подходит для
+                        быстрых рейдов по зоне.
+                        Имеет большой багажник
+                        и хорошую скорость.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/Niva2329/niva (1).jpg',
+                        'img/shop/cars/Niva2329/niva (2).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/patriot_2760_RUS/patriot (1).jpg">
+
+                <h3>
+                    Patriot 2760 RUS
+                </h3>
+
+                <p>
+                    4.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'patriot',
+
+                        title:'Patriot 2760 RUS',
+
+                        price:'4.500 RU',
+
+                        description:`
+                        4 места 
+                        800 литров багажника для перевозки добычи.
+                        Отличная лошадка для поездок
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/patriot_2760_RUS/patriot (1).jpg',
+                        'img/shop/cars/patriot_2760_RUS/patriot (2).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/UAZ_33094/uaz_33094 (1).jpg">
+
+                <h3>
+                    UAZ 33094
+                </h3>
+
+                <p>
+                    5.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'uaz33094',
+
+                        title:'UAZ 33094',
+
+                        price:'5.000 RU',
+
+                        description:`
+                        4 места.
+                        800 литров багажника для перевозки добычи.
+                        Универсальный трансорт, перевозка людей и грузов это про его.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/UAZ_33094/uaz_33094 (1).jpg',
+                        'img/shop/cars/UAZ_33094/uaz_33094 (2).jpg',
+                        'img/shop/cars/UAZ_33094/uaz_33094 (3).jpg',
+                        'img/shop/cars/UAZ_33094/uaz_33094 (4).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/UAZ_3962/byx.jpg">
+
+                <h3>
+                    UAZ 3962
+                </h3>
+
+                <p>
+                    4.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'uaz3962',
+
+                        title:'UAZ 3962',
+
+                        price:'4.500 RU',
+
+                        description:`
+                        4 места.
+                        800 литров багажника для перевозки добычи.
+                        Класическая советская буханка, надежная и проходимая машина для перемещения по зоне.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/UAZ_3962/byx.jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/UAZ_469_army/uazik (1).jpg">
+
+                <h3>
+                    UAZ 469 Army
+                </h3>
+
+                <p>
+                    5.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'uaz469army',
+
+                        title:'UAZ 469 Army',
+
+                        price:'5.000 RU',
+
+                        description:`
+                        5 мест.
+                        800 литров багажника для перевозки добычи.
+                        Тот самый легендарный уазик.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/UAZ_469_army/uazik (1).jpg',
+                        'img/shop/cars/UAZ_469_army/uazik (2).jpg',
+                        'img/shop/cars/UAZ_469_army/uazik (3).jpg',
+                        'img/shop/cars/UAZ_469_army/uazik (4).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/UAZ_469_Hunter/uazhunter.jpg">
+
+                <h3>
+                    UAZ 469 Hunter
+                </h3>
+
+                <p>
+                    5.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'uaz469hunter',
+
+                        title:'UAZ 469 Hunter',
+
+                        price:'5.500 RU',
+
+                        description:`
+                        4 места.
+                        800 литров багажника для перевозки добычи.
+                        Где-то я его уже видел...
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/UAZ_469_Hunter/uazhunter.jpg',
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/UAZ_Patrion_Pikap/uazpikap (1).jpg">
+
+                <h3>
+                    UAZ Patrion Pikap
+                </h3>
+
+                <p>
+                    4.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'uazpatriotpikap',
+
+                        title:'UAZ Patrion Pikap',
+
+                        price:'4.500 RU',
+
+                        description:`
+                        4 места.
+                        800 литров багажника для перевозки добычи.
+                        Отличный и провереный временим пикап для перевозки людей и грузов по зоне.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/UAZ_Patrion_Pikap/uazpikap (1).jpg',
+                        'img/shop/cars/UAZ_Patrion_Pikap/uazpikap (2).jpg',
+                        'img/shop/cars/UAZ_Patrion_Pikap/uazpikap (3).jpg',
+                        'img/shop/cars/UAZ_Patrion_Pikap/uazpikap (4).jpg',
+                        'img/shop/cars/UAZ_Patrion_Pikap/uazpikap (5).jpg',
+                        'img/shop/cars/UAZ_Patrion_Pikap/uazpikap (6).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/VAZ2109/vaz2109 (1).jpg">
+
+                <h3>
+                    VAZ 2109
+                </h3>
+
+                <p>
+                    4.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'vaz2109',
+
+                        title:'VAZ 2109',
+
+                        price:'4.000 RU',
+
+                        description:`
+                        4 места
+                        250 литров багажника для перевозки добычи.
+                        Мощный спортивный седан.
+                        Отлично подходит для
+                        быстрых рейдов по зоне.
+                        Имеет большой багажник
+                        и хорошую скорость.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/VAZ2109/vaz2109 (1).jpg',
+                        'img/shop/cars/VAZ2109/vaz2109 (2).jpg',
+                        'img/shop/cars/VAZ2109/vaz2109 (3).jpg',
+                        'img/shop/cars/VAZ2109/vaz2109 (4).jpg',
+                        'img/shop/cars/VAZ2109/vaz2109 (5).jpg',
+                        'img/shop/cars/VAZ2109/vaz2109 (6).jpg',
+                        'img/shop/cars/VAZ2109/vaz2109 (7).jpg',
+                        'img/shop/cars/VAZ2109/vaz2109 (8).jpg',
+                        'img/shop/cars/VAZ2109/vaz2109 (9).jpg',
+                        'img/shop/cars/VAZ2109/vaz2109 (10).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/VAZ_2104RF/2104 (1).jpg">
+
+                <h3>
+                    VAZ 2104 RF
+                </h3>
+
+                <p>
+                    4.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'vaz2104rf',
+
+                        title:'VAZ 2104 RF',
+
+                        price:'4.000 RU',
+
+                        description:`
+                        4 места
+                        600 литров багажника для перевозки добычи.
+                        Отличная семейная машина.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/VAZ_2104RF/2104 (1).jpg',
+                        'img/shop/cars/VAZ_2104RF/2104 (2).jpg',
+                        'img/shop/cars/VAZ_2104RF/2104 (3).jpg',
+                        'img/shop/cars/VAZ_2104RF/2104 (4).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/VAZ_2107/vaz2107 (1).jpg">
+
+                <h3>
+                    VAZ 2107
+                </h3>
+
+                <p>
+                    4.000 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'vaz2107',
+
+                        title:'VAZ 2107',
+
+                        price:'4.000 RU',
+
+                        description:`
+                        4 места
+                        350 литров багажника для перевозки добычи.
+                        Есть как передний, задний и полный привод( на выбор покупателя).
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/VAZ_2107/vaz2107 (1).jpg',
+                        'img/shop/cars/VAZ_2107/vaz2107 (2).jpg',
+                        'img/shop/cars/VAZ_2107/vaz2107 (3).jpg',
+                        'img/shop/cars/VAZ_2107/vaz2107 (4).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+            <div class="shop-card" data-category="vehicles">
+
+                <img src="img/shop/cars/ZAZ_968/zapar (1).jpg">
+
+                <h3>
+                    ZAZ 968
+                </h3>
+
+                <p>
+                    3.500 RU
+                </p>
+
+                <button onclick="openInfo({
+
+                        id:'zaz968',
+
+                        title:'ZAZ 968',
+
+                        price:'3.500 RU',
+
+                        description:`
+                        4 места
+                        500 литров багажника для перевозки добычи.
+                        Отличная маленькая машинка для перемещения по зоне, может проехать там где другие застрянут.
+                        `,
+
+                    images:[
+
+                        'img/shop/cars/ZAZ_968/zapar (1).jpg',
+                        'img/shop/cars/ZAZ_968/zapar (2).jpg',
+                        'img/shop/cars/ZAZ_968/zapar (3).jpg',
+                        'img/shop/cars/ZAZ_968/zapar (4).jpg',
+                        'img/shop/cars/ZAZ_968/zapar (5).jpg',
+                        'img/shop/cars/ZAZ_968/zapar (6).jpg'
+                    ]
+
+                })">
+
+                    Подробнее
+
+                </button>
+
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+<script>
+
+fetch('/api/user')
+
+.then(res=>res.json())
+
+.then(user=>{
+
+    if(!user){
+
+        window.location.href =
+        '/cabinet.html';
+
+        return;
+    }
+
+        document
+    .getElementById('profile-avatar')
+    .src = user.avatar;
+
+    document
+    .getElementById('profile-name')
+    .innerText = user.name;
+
+});
+
+fetch('/api/data')
+
+.then(res=>res.json())
+
+.then(data=>{
+
+    document
+    .getElementById('balance')
+    .innerText =
+
+        data.balance.toLocaleString()
+        + ' RU';
+
+});
+
+function showCategory(event,category){
+
+    document
+    .querySelectorAll('.category-btn')
+    .forEach(btn=>{
+
+        btn.classList.remove(
+            'active-category'
+        );
+
+    });
+
+    event.target.classList.add(
+        'active-category'
+    );
+
+    document
+    .querySelectorAll('.shop-card')
+    .forEach(card=>{
+
+        if(
+
+            category === 'all'
+
+            ||
+
+            card.dataset.category
+            === category
+
+        ){
+
+            card.style.display='flex';
+
+        }else{
+
+            card.style.display='none';
+
+        }
+
+    });
+
+}
+
+async function buyItem(item){
+
+    const res =
+
+    await fetch('/buy/' + item,{
+
+        method:'POST'
+
+    });
+
+    const data =
+    await res.json();
+
+    if(data.success){
+
+        // ОБНОВЛЯЕМ БАЛАНС
+
+        const updated =
+        await fetch('/api/data');
+
+        const userData =
+        await updated.json();
+
+        document
+        .getElementById('balance')
+        .innerText =
+
+            userData.balance
+            .toLocaleString()
+
+            + ' RU';
+
+        showNotify(
+            'Покупка успешна',
+            'success'
+        );
+
+    }else{
+
+        showNotify(
+
+            data.error ===
+            'not enough money'
+
+            ? 'Недостаточно денег'
+
+            : 'Ошибка покупки',
+
+            'error'
+
+        );
+
+
+    }
+
+}
+let currentImages = [];
+
+let currentImageIndex = 0;
+function openInfo(item){
+
+
+    document
+    .getElementById('info-modal')
+    .style.display='flex';
+
+    document
+    .getElementById('info-title')
+    .innerText = item.title;
+
+    document
+    .getElementById('info-description')
+    .innerText = item.description;
+
+    document
+    .getElementById('info-image')
+    .src = item.images[0];
+    currentImages = item.images;
+
+    currentImageIndex = 0;
+
+    document
+    .getElementById('info-price')
+    .innerText = item.price;
+
+    document
+    .getElementById('info-buy')
+    .onclick = ()=>{
+
+        buyItem(item.id);
+
+    };
+
+    const gallery =
+    document.getElementById(
+        'info-gallery'
+    );
+
+    gallery.innerHTML = '';
+
+    item.images.forEach(image=>{
+
+        gallery.innerHTML += `
+
+            <img src="${image}"
+
+                 onclick="
+                 document
+                 .getElementById(
+                    'info-image'
+                 ).src='${image}'
+                 ">
+
+        `;
+
+    });
+
+}
+function closeInfo(){
+
+    document
+    .getElementById('info-modal')
+    .style.display='none';
+    currentImages = [];
+
+currentImageIndex = 0;
+}
+function scrollToTop(){
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:'smooth'
+
+    });
+
+}
+
+window.addEventListener(
+
+    'scroll',
+
+    ()=>{
+
+        const btn =
+        document.getElementById(
+            'scrollTopBtn'
+        );
+
+        if(window.scrollY > 300){
+
+            btn.classList.add(
+                'show-scroll'
+            );
+
+        }else{
+
+            btn.classList.remove(
+                'show-scroll'
+            );
+
+        }
+
+    }
+
+);
+document.addEventListener(
+
+    'keydown',
+
+    (e)=>{
+
+        if(e.key === 'Escape'){
+
+            closeInfo();
+
+        }
+
+    }
+
+);
+function nextImage(){
+
+    currentImageIndex++;
+
+    if(
+        currentImageIndex >=
+        currentImages.length
+    ){
+
+        currentImageIndex = 0;
+
+    }
+
+    document
+    .getElementById('info-image')
+    .src = currentImages[
+        currentImageIndex
+    ];
+
+}
+
+function prevImage(){
+
+    currentImageIndex--;
+
+    if(currentImageIndex < 0){
+
+        currentImageIndex =
+        currentImages.length - 1;
+
+    }
+
+    document
+    .getElementById('info-image')
+    .src = currentImages[
+        currentImageIndex
+    ];
+
+}
+function showNotify(text,type){
+
+    const notify =
+    document.getElementById(
+        'notify'
+    );
+
+    notify.className =
+    'notify';
+
+    notify.classList.add(type);
+
+    notify.classList.add(
+        'show-notify'
+    );
+
+    document
+    .getElementById(
+        'notify-text'
+    )
+    .innerText = text;
+
+    setTimeout(()=>{
+
+        notify.classList.remove(
+            'show-notify'
+        );
+
+    },3000);
+
+}
+
+</script>
+<div class="info-modal"
+     id="info-modal">
+
+    <div class="info-box">
+
+        <span class="close-info"
+              onclick="closeInfo()">
+
+            ×
+
+        </span>
+
+        <div class="info-image-wrapper">
+
+    <button class="slider-arrow left-arrow"
+            onclick="prevImage()">
+
+        ❮
+
+    </button>
+
+    <img id="info-image"
+         class="info-image">
+
+    <button class="slider-arrow right-arrow"
+            onclick="nextImage()">
+
+        ❯
+
+    </button>
+
+</div>
+
+        <div class="info-gallery"
+             id="info-gallery">
+
+        </div>
+
+        <h2 id="info-title"></h2>
+
+        <p id="info-description"></p>
+        <div class="info-price"
+     id="info-price">
+
+</div>
+
+<button id="info-buy"
+        class="info-buy-btn">
+
+    Купить
+
+</button>
+
+    </div>
+
+</div>
+<div class="notify"
+     id="notify">
+
+    <span id="notify-text">
+
+    </span>
+
+</div>
+<button class="scroll-top-btn"
+        id="scrollTopBtn"
+        onclick="scrollToTop()">
+
+    ↑
+
+</button>
+</body>
+</html>

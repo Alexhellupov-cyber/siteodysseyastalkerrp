@@ -1,0 +1,343 @@
+body{
+
+    margin:0;
+
+    background:
+    linear-gradient(
+        180deg,
+        #050505,
+        #0b0b0b
+    );
+
+    font-family:Arial;
+
+    overflow-x:hidden;
+}
+
+.admin-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:40px;
+
+    color:white;
+}
+
+.admin-box{
+
+    width:100%;
+
+    max-width:950px;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:
+    rgba(12,12,12,.96);
+
+    border:
+    1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+    0 0 60px rgba(0,0,0,.45);
+
+    backdrop-filter:blur(12px);
+}
+
+.admin-title{
+
+    font-size:52px;
+
+    font-weight:900;
+
+    margin-bottom:35px;
+
+    color:#9eff00;
+
+    text-align:center;
+
+    letter-spacing:2px;
+
+    text-shadow:
+    0 0 18px rgba(158,255,0,.18);
+}
+
+.admin-input{
+
+    width:100%;
+
+    height:60px;
+
+    padding:0 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:16px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    margin-bottom:20px;
+
+    font-size:17px;
+
+    box-sizing:border-box;
+
+    transition:.25s;
+}
+
+.admin-input:focus{
+
+    border-color:#9eff00;
+
+    box-shadow:
+    0 0 20px rgba(158,255,0,.15);
+}
+
+.admin-input::placeholder{
+
+    color:#777;
+}
+
+.admin-btn{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#9eff00;
+
+    color:black;
+
+    font-size:16px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    margin-bottom:20px;
+}
+
+.admin-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 30px rgba(158,255,0,.25);
+}
+
+.admin-user{
+
+    margin-top:35px;
+}
+.steam-login-btn{
+
+    width:100%;
+
+    height:58px;
+
+    margin-bottom:20px;
+
+    border-radius:16px;
+
+    background:#171a21;
+
+    color:white;
+
+    font-weight:800;
+
+    text-decoration:none;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s;
+
+    border:
+    1px solid rgba(255,255,255,.06);
+}
+
+.steam-login-btn:hover{
+
+    transform:translateY(-2px);
+
+    background:#1f2430;
+
+    box-shadow:
+    0 0 25px rgba(255,255,255,.08);
+}
+
+.inventory-tag{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 16px;
+
+    border-radius:14px;
+
+    background:#9eff00;
+
+    color:black;
+
+    font-weight:800;
+}
+
+.remove-item-btn{
+
+    width:28px;
+
+    height:28px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:black;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.2s;
+}
+
+.remove-item-btn:hover{
+
+    transform:scale(1.08);
+
+    background:#222;
+}
+.admin-card{
+
+    padding:28px;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.035);
+
+    border:
+    1px solid rgba(255,255,255,.05);
+
+    margin-bottom:24px;
+}
+
+.admin-card h2{
+
+    margin-top:0;
+
+    margin-bottom:22px;
+
+    font-size:28px;
+
+    color:#9eff00;
+}
+
+.inventory-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:18px;
+}
+
+.inventory-tag{
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    background:#9eff00;
+
+    color:black;
+
+    font-weight:800;
+
+    font-size:15px;
+
+    box-shadow:
+    0 0 18px rgba(158,255,0,.18);
+}
+
+#admin-login{
+
+    animation:fade .35s ease;
+}
+
+#admin-panel{
+
+    animation:fade .35s ease;
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+@media (max-width:700px){
+
+    .admin-page{
+
+        padding:20px;
+    }
+
+    .admin-box{
+
+        padding:28px;
+    }
+
+    .admin-title{
+
+        font-size:38px;
+    }
+
+}

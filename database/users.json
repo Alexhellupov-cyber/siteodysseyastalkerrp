@@ -1,0 +1,111 @@
+{
+    "76561198943510746": {
+        "balance": 44250,
+        "inventory": [
+            {
+                "id": "bmw",
+                "name": "BMW E34"
+            }
+        ],
+        "purchases": [
+            {
+                "name": "AS VAL",
+                "date": "2026-05-25T08:46:52.378Z"
+            },
+            {
+                "name": "BMW E34",
+                "date": "2026-05-25T08:47:05.699Z"
+            }
+        ],
+        "nickname": "ZRYACHIY",
+        "avatar": "https://avatars.steamstatic.com/ac2bd4a881a4122fb6c459055e86e11304d4c825_full.jpg"
+    },
+    "76561198452873999": {
+        "balance": 93300,
+        "inventory": [
+            {
+                "id": "weapon_ak12",
+                "name": "AK 12"
+            },
+            {
+                "id": "landrover",
+                "name": "Land Rover Defender 110"
+            },
+            {
+                "id": "forweapons_45mag545",
+                "name": "45-патронный магазин 5.45x39 мм"
+            }
+        ],
+        "purchases": [
+            {
+                "name": "AK 12",
+                "date": "2026-05-25T10:43:34.334Z"
+            },
+            {
+                "name": "AK 12",
+                "date": "2026-05-25T10:43:34.336Z"
+            },
+            {
+                "name": "Land Rover Defender 110",
+                "date": "2026-05-25T10:44:03.377Z"
+            },
+            {
+                "name": "45-патронный магазин 5.45x39 мм",
+                "date": "2026-05-25T10:44:30.457Z"
+            }
+        ],
+        "nickname": "Txt_Echo",
+        "avatar": "https://avatars.steamstatic.com/7885f48d216a08ca0a06e565c4c569492d85ddf5_full.jpg"
+    },
+    "76561198850475710": {
+        "balance": 86500,
+        "inventory": [
+            {
+                "id": "patriot",
+                "name": "Patriot 2760 RUS"
+            }
+        ],
+        "purchases": [
+            {
+                "name": "Универсальный глушитель",
+                "date": "2026-05-25T14:24:08.357Z"
+            },
+            {
+                "name": "BTR-80P",
+                "date": "2026-05-25T14:40:36.539Z"
+            },
+            {
+                "name": "ZAZ 968",
+                "date": "2026-05-25T14:40:50.251Z"
+            },
+            {
+                "name": "Patriot 2760 RUS",
+                "date": "2026-05-25T14:44:49.485Z"
+            },
+            {
+                "name": "Patriot 2760 RUS",
+                "date": "2026-05-25T14:44:52.272Z"
+            },
+            {
+                "name": "Patriot 2760 RUS",
+                "date": "2026-05-25T14:44:53.589Z"
+            }
+        ],
+        "nickname": "Aah...Hentai!~",
+        "avatar": "https://avatars.steamstatic.com/dc5acf3f237c6189073379cbc49c4a4b152b3f9f_full.jpg"
+    },
+    "76561198928867944": {
+        "balance": 200,
+        "inventory": [],
+        "purchases": [],
+        "nickname": "Nait",
+        "avatar": "https://avatars.steamstatic.com/be65902c43f582d8c064c0fed73dceaf885b6455_full.jpg"
+    },
+    "76561198322578393": {
+        "balance": 200,
+        "inventory": [],
+        "purchases": [],
+        "nickname": "Tumoxa",
+        "avatar": "https://avatars.steamstatic.com/9b75cb8641bec11676f66f3d8eb4995ddec08908_full.jpg"
+    }
+}

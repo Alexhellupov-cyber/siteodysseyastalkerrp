@@ -1,0 +1,598 @@
+.cabinet-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow-x:hidden;
+}
+
+.cabinet{
+
+    position:relative;
+
+    z-index:5;
+
+    width:420px;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    background:rgba(10,10,10,.82);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    text-align:center;
+
+    box-shadow:0 0 40px rgba(0,0,0,.45);
+}
+
+.steam-btn{
+
+    width:100%;
+
+    height:62px;
+
+    border-radius:16px;
+
+    background:#9eff00;
+
+    color:black;
+
+    font-weight:700;
+
+    font-size:18px;
+
+    text-decoration:none;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s;
+}
+
+.steam-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 24px rgba(158,255,0,.35);
+}
+
+.avatar{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid #9eff00;
+
+    margin-bottom:25px;
+}
+
+.nickname{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+    color:white;
+}
+
+.steamid{
+
+    color:#9b9b9b;
+
+    font-size:15px;
+}
+.cabinet-layout{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    position:relative;
+
+    z-index:5;
+}
+
+.cabinet-sidebar{
+
+    width:320px;
+
+    background:rgba(10,10,10,.82);
+
+    border-right:1px solid rgba(255,255,255,.06);
+
+    padding:40px 25px;
+
+    backdrop-filter:blur(18px);
+}
+
+.cabinet-user{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.cabinet-nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.cabinet-tab,
+.logout-btn{
+
+    height:54px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.04);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.25s;
+
+    text-decoration:none;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.cabinet-tab:hover,
+.logout-btn:hover{
+
+    background:rgba(158,255,0,.12);
+}
+
+.active-tab{
+
+    background:#9eff00;
+
+    color:black;
+
+    font-weight:700;
+}
+
+.cabinet-content{
+
+    flex:1;
+
+    padding:60px;
+}
+
+.cabinet-section{
+
+    display:none;
+}
+
+.active-section{
+
+    display:block;
+}
+
+.cabinet-section h1{
+
+    font-size:52px;
+
+    margin-bottom:40px;
+}
+
+.cabinet-section h4{
+
+    font-size:18px;
+
+    color:#e71919;
+
+    margin-bottom:30px;
+}
+
+.home-btn{
+
+    width:100%;
+
+    height:52px;
+
+    margin-bottom:18px;
+
+    border-radius:14px;
+
+    background:#9eff00;
+
+    color:black;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s;
+}
+
+.home-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 25px rgba(158,255,0,.25);
+}
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(240px,1fr));
+
+    gap:20px;
+}
+
+.info-card,
+.balance-card,
+.inventory-item,
+.purchase-card{
+
+    padding:30px;
+
+    border-radius:22px;
+
+    background:rgba(10,10,10,.72);
+
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.info-card span{
+
+    color:#9b9b9b;
+
+    font-size:14px;
+}
+
+.info-card h3{
+
+    margin-top:15px;
+
+    font-size:30px;
+}
+
+.balance-card h2{
+
+    margin-top:15px;
+
+    font-size:56px;
+
+    color:#9eff00;
+
+    margin-bottom:0;
+}
+
+.inventory-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+}
+
+.purchase-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+.buy-btn{
+
+    width:100%;
+
+    height:46px;
+
+    margin-top:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#9eff00;
+
+    color:black;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.buy-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 20px rgba(158,255,0,.25);
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .cabinet-layout{
+
+        flex-direction:column;
+    }
+
+    .cabinet-sidebar{
+
+        width:100%;
+
+        border-right:none;
+
+        border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .cabinet-content{
+
+        padding:30px 18px;
+    }
+
+    .cabinet-section h1{
+
+        font-size:36px;
+    }
+
+    .balance-card h2{
+
+        font-size:38px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .cabinet{
+
+        width:92%;
+
+        padding:30px 22px;
+    }
+
+    .avatar{
+
+        width:130px;
+
+        height:130px;
+    }
+
+    .nickname{
+
+        font-size:28px;
+    }
+
+    .steam-btn{
+
+        height:56px;
+
+        font-size:16px;
+    }
+
+}
+
+.claim-btn{
+
+    width:100%;
+
+    height:48px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#9eff00;
+
+    color:black;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.claim-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 20px rgba(158,255,0,.25);
+}
+
+.deposit-box{
+
+    margin-top:30px;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid
+    rgba(255,255,255,.06);
+}
+
+.deposit-box h2{
+
+    margin-bottom:20px;
+
+    color:#9eff00;
+}
+
+.deposit-box{
+
+    margin-top:35px;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(15,15,15,.92),
+        rgba(0,0,0,.72)
+    );
+
+    border:
+    1px solid
+    rgba(158,255,0,.12);
+
+    backdrop-filter:
+    blur(12px);
+
+    box-shadow:
+    0 0 35px
+    rgba(0,0,0,.35);
+}
+
+.deposit-header{
+
+    margin-bottom:28px;
+}
+
+.deposit-header h2{
+
+    font-size:42px;
+
+    color:#9eff00;
+
+    margin-bottom:10px;
+}
+
+.deposit-header p{
+
+    color:#9b9b9b;
+
+    font-size:16px;
+}
+
+.deposit-form{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+}
+
+.deposit-input{
+
+    flex:1;
+
+    height:62px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    padding:0 22px;
+
+    color:white;
+
+    font-size:20px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.06);
+
+    transition:.2s;
+}
+
+.deposit-input:focus{
+
+    border:
+    1px solid
+    rgba(158,255,0,.4);
+
+    box-shadow:
+    0 0 20px
+    rgba(158,255,0,.15);
+}
+
+.deposit-pay-btn{
+
+    width:240px;
+
+    height:62px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#9eff00;
+
+    color:black;
+
+    font-size:18px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.deposit-pay-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 25px
+    rgba(158,255,0,.3);
+}
